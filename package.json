@@ -1,0 +1,20 @@
+{
+  "name": "passable",
+  "version": "5.7.6",
+  "description": "Isomorphic Data Model Validations",
+  "main": "./dist/Passable.min.js",
+  "author": "Evyatar <evyatar.a@fiverr.com>",
+  "license": "MIT",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fiverr/passable.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fiverr/passable/issues"
+  },
+  "homepage": "https://github.com/fiverr/passable#readme",
+  "devDependencies": {
+    "docpress": "0.7.1"
+  }
+}
