@@ -3,7 +3,7 @@
     "sections": [
       {
         "title": "PASSABLE",
-        "source": "docs/MAIN.md",
+        "source": "documentation/MAIN.md",
         "url": "index.html",
         "slug": "index",
         "headings": [
@@ -31,7 +31,7 @@
             "sections": [
               {
                 "title": "Installation",
-                "source": "docs/getting_started/installation.md",
+                "source": "documentation/getting_started/installation.md",
                 "url": "getting_started/installation.html",
                 "slug": "getting_startedinstallation",
                 "headings": [
@@ -44,13 +44,13 @@
               },
               {
                 "title": "Writing tests",
-                "source": "docs/getting_started/writing_tests.md",
+                "source": "documentation/getting_started/writing_tests.md",
                 "url": "getting_started/writing_tests.html",
                 "slug": "getting_startedwriting_tests"
               },
               {
                 "title": "The response object",
-                "source": "docs/getting_started/response.md",
+                "source": "documentation/getting_started/response.md",
                 "url": "getting_started/response.html",
                 "slug": "getting_startedresponse",
                 "headings": [
@@ -78,31 +78,31 @@
               },
               {
                 "title": "Passable params",
-                "source": "docs/getting_started/params.md",
+                "source": "documentation/getting_started/params.md",
                 "url": "getting_started/params.html",
                 "slug": "getting_startedparams"
               },
               {
                 "title": "The pass function",
-                "source": "docs/getting_started/pass/index.md",
+                "source": "documentation/getting_started/pass/index.md",
                 "url": "getting_started/pass/index.html",
                 "slug": "getting_startedpass",
                 "sections": [
                   {
                     "title": "How to fail a pass",
-                    "source": "docs/getting_started/pass/how_to_fail.md",
+                    "source": "documentation/getting_started/pass/how_to_fail.md",
                     "url": "getting_started/pass/how_to_fail.html",
                     "slug": "getting_startedpasshow_to_fail"
                   },
                   {
                     "title": "Warn only passes",
-                    "source": "docs/getting_started/pass/warn_only_passes.md",
+                    "source": "documentation/getting_started/pass/warn_only_passes.md",
                     "url": "getting_started/pass/warn_only_passes.html",
                     "slug": "getting_startedpasswarn_only_passes"
                   },
                   {
                     "title": "Running a specific pass",
-                    "source": "docs/getting_started/pass/specific.md",
+                    "source": "documentation/getting_started/pass/specific.md",
                     "url": "getting_started/pass/specific.html",
                     "slug": "getting_startedpassspecific"
                   }
@@ -112,13 +112,13 @@
           },
           {
             "title": "The Enforce Function",
-            "source": "docs/enforce/README.md",
+            "source": "documentation/enforce/README.md",
             "url": "enforce/index.html",
             "slug": "enforce",
             "sections": [
               {
                 "title": "Enforce relationships",
-                "source": "docs/enforce/relationships/README.md",
+                "source": "documentation/enforce/relationships/README.md",
                 "url": "enforce/relationships/index.html",
                 "slug": "enforcerelationships",
                 "headings": [
@@ -146,13 +146,13 @@
               },
               {
                 "title": "Enforce Rules",
-                "source": "docs/enforce/rules/README.md",
+                "source": "documentation/enforce/rules/README.md",
                 "url": "enforce/rules/index.html",
                 "slug": "enforcerules",
                 "sections": [
                   {
                     "title": "content/matches",
-                    "source": "docs/enforce/rules/content/matches/README.md",
+                    "source": "documentation/enforce/rules/content/matches/README.md",
                     "url": "enforce/rules/content/matches/index.html",
                     "slug": "enforcerulescontentmatches",
                     "headings": [
@@ -180,7 +180,7 @@
                   },
                   {
                     "title": "content/inside",
-                    "source": "docs/enforce/rules/content/inside/README.md",
+                    "source": "documentation/enforce/rules/content/inside/README.md",
                     "url": "enforce/rules/content/inside/index.html",
                     "slug": "enforcerulescontentinside",
                     "headings": [
@@ -220,7 +220,7 @@
                   },
                   {
                     "title": "lang/isArray",
-                    "source": "docs/enforce/rules/lang/is_array/README.md",
+                    "source": "documentation/enforce/rules/lang/is_array/README.md",
                     "url": "enforce/rules/lang/is_array/index.html",
                     "slug": "enforceruleslangis_array",
                     "headings": [
@@ -248,7 +248,7 @@
                   },
                   {
                     "title": "lang/isString",
-                    "source": "docs/enforce/rules/lang/is_string/README.md",
+                    "source": "documentation/enforce/rules/lang/is_string/README.md",
                     "url": "enforce/rules/lang/is_string/index.html",
                     "slug": "enforceruleslangis_string",
                     "headings": [
@@ -276,7 +276,7 @@
                   },
                   {
                     "title": "lang/isNumber",
-                    "source": "docs/enforce/rules/lang/is_number/README.md",
+                    "source": "documentation/enforce/rules/lang/is_number/README.md",
                     "url": "enforce/rules/lang/is_number/index.html",
                     "slug": "enforceruleslangis_number",
                     "headings": [
@@ -304,7 +304,7 @@
                   },
                   {
                     "title": "size/isEmpty",
-                    "source": "docs/enforce/rules/size/is_empty/README.md",
+                    "source": "documentation/enforce/rules/size/is_empty/README.md",
                     "url": "enforce/rules/size/is_empty/index.html",
                     "slug": "enforcerulessizeis_empty",
                     "headings": [
@@ -332,7 +332,7 @@
                   },
                   {
                     "title": "size/largerThan",
-                    "source": "docs/enforce/rules/size/larger_than/README.md",
+                    "source": "documentation/enforce/rules/size/larger_than/README.md",
                     "url": "enforce/rules/size/larger_than/index.html",
                     "slug": "enforcerulessizelarger_than",
                     "headings": [
@@ -360,7 +360,7 @@
                   },
                   {
                     "title": "size/largerThanOrEquals",
-                    "source": "docs/enforce/rules/size/larger_than_or_equals/README.md",
+                    "source": "documentation/enforce/rules/size/larger_than_or_equals/README.md",
                     "url": "enforce/rules/size/larger_than_or_equals/index.html",
                     "slug": "enforcerulessizelarger_than_or_equals",
                     "headings": [
@@ -388,7 +388,7 @@
                   },
                   {
                     "title": "size/sizeEquals",
-                    "source": "docs/enforce/rules/size/size_equals/README.md",
+                    "source": "documentation/enforce/rules/size/size_equals/README.md",
                     "url": "enforce/rules/size/size_equals/index.html",
                     "slug": "enforcerulessizesize_equals",
                     "headings": [
@@ -416,7 +416,7 @@
                   },
                   {
                     "title": "size/smallerThan",
-                    "source": "docs/enforce/rules/size/smaller_than/README.md",
+                    "source": "documentation/enforce/rules/size/smaller_than/README.md",
                     "url": "enforce/rules/size/smaller_than/index.html",
                     "slug": "enforcerulessizesmaller_than",
                     "headings": [
@@ -444,7 +444,7 @@
                   },
                   {
                     "title": "size/smallerThanOrEquals",
-                    "source": "docs/enforce/rules/size/smaller_than_or_equals/README.md",
+                    "source": "documentation/enforce/rules/size/smaller_than_or_equals/README.md",
                     "url": "enforce/rules/size/smaller_than_or_equals/index.html",
                     "slug": "enforcerulessizesmaller_than_or_equals",
                     "headings": [
@@ -474,7 +474,7 @@
               },
               {
                 "title": "Custom Enforce Rules",
-                "source": "docs/enforce/rules/custom.md",
+                "source": "documentation/enforce/rules/custom.md",
                 "url": "enforce/rules/custom.html",
                 "slug": "enforcerulescustom",
                 "headings": [
@@ -487,6 +487,11 @@
                     "title": "Per Test Custom Rules",
                     "depth": 2,
                     "id": "per-test-custom-rules"
+                  },
+                  {
+                    "title": "Inline Custom Rules",
+                    "depth": 2,
+                    "id": "inline-custom-rules"
                   }
                 ]
               }
@@ -494,7 +499,7 @@
           },
           {
             "title": "Using with assertions libraries",
-            "source": "docs/compatability/assertions.md",
+            "source": "documentation/compatability/assertions.md",
             "url": "compatability/assertions.html",
             "slug": "compatabilityassertions"
           }
@@ -504,7 +509,7 @@
   },
   "index": {
     "index.html": {
-      "source": "docs/MAIN.md",
+      "source": "documentation/MAIN.md",
       "title": "PASSABLE",
       "pageTitle": "PASSABLE",
       "slug": "index",
@@ -529,7 +534,7 @@
       ]
     },
     "getting_started/installation.html": {
-      "source": "docs/getting_started/installation.md",
+      "source": "documentation/getting_started/installation.md",
       "title": "Installation - PASSABLE",
       "pageTitle": "Installation",
       "slug": "getting_startedinstallation",
@@ -542,13 +547,13 @@
       ]
     },
     "getting_started/writing_tests.html": {
-      "source": "docs/getting_started/writing_tests.md",
+      "source": "documentation/getting_started/writing_tests.md",
       "title": "Writing tests - PASSABLE",
       "pageTitle": "Writing tests",
       "slug": "getting_startedwriting_tests"
     },
     "getting_started/response.html": {
-      "source": "docs/getting_started/response.md",
+      "source": "documentation/getting_started/response.md",
       "title": "The response object - PASSABLE",
       "pageTitle": "The response object",
       "slug": "getting_startedresponse",
@@ -576,43 +581,43 @@
       ]
     },
     "getting_started/params.html": {
-      "source": "docs/getting_started/params.md",
+      "source": "documentation/getting_started/params.md",
       "title": "Passable params - PASSABLE",
       "pageTitle": "Passable params",
       "slug": "getting_startedparams"
     },
     "getting_started/pass/index.html": {
-      "source": "docs/getting_started/pass/index.md",
+      "source": "documentation/getting_started/pass/index.md",
       "title": "The pass function - PASSABLE",
       "pageTitle": "The pass function",
       "slug": "getting_startedpass"
     },
     "getting_started/pass/how_to_fail.html": {
-      "source": "docs/getting_started/pass/how_to_fail.md",
+      "source": "documentation/getting_started/pass/how_to_fail.md",
       "title": "How to fail a pass - PASSABLE",
       "pageTitle": "How to fail a pass",
       "slug": "getting_startedpasshow_to_fail"
     },
     "getting_started/pass/warn_only_passes.html": {
-      "source": "docs/getting_started/pass/warn_only_passes.md",
+      "source": "documentation/getting_started/pass/warn_only_passes.md",
       "title": "Warn only passes - PASSABLE",
       "pageTitle": "Warn only passes",
       "slug": "getting_startedpasswarn_only_passes"
     },
     "getting_started/pass/specific.html": {
-      "source": "docs/getting_started/pass/specific.md",
+      "source": "documentation/getting_started/pass/specific.md",
       "title": "Running a specific pass - PASSABLE",
       "pageTitle": "Running a specific pass",
       "slug": "getting_startedpassspecific"
     },
     "enforce/index.html": {
-      "source": "docs/enforce/README.md",
+      "source": "documentation/enforce/README.md",
       "title": "The Enforce Function - PASSABLE",
       "pageTitle": "The Enforce Function",
       "slug": "enforce"
     },
     "enforce/relationships/index.html": {
-      "source": "docs/enforce/relationships/README.md",
+      "source": "documentation/enforce/relationships/README.md",
       "title": "Enforce relationships - PASSABLE",
       "pageTitle": "Enforce relationships",
       "slug": "enforcerelationships",
@@ -640,13 +645,13 @@
       ]
     },
     "enforce/rules/index.html": {
-      "source": "docs/enforce/rules/README.md",
+      "source": "documentation/enforce/rules/README.md",
       "title": "Enforce Rules - PASSABLE",
       "pageTitle": "Enforce Rules",
       "slug": "enforcerules"
     },
     "enforce/rules/content/matches/index.html": {
-      "source": "docs/enforce/rules/content/matches/README.md",
+      "source": "documentation/enforce/rules/content/matches/README.md",
       "title": "content/matches - PASSABLE",
       "pageTitle": "content/matches",
       "slug": "enforcerulescontentmatches",
@@ -674,7 +679,7 @@
       ]
     },
     "enforce/rules/content/inside/index.html": {
-      "source": "docs/enforce/rules/content/inside/README.md",
+      "source": "documentation/enforce/rules/content/inside/README.md",
       "title": "content/inside - PASSABLE",
       "pageTitle": "content/inside",
       "slug": "enforcerulescontentinside",
@@ -714,7 +719,7 @@
       ]
     },
     "enforce/rules/lang/is_array/index.html": {
-      "source": "docs/enforce/rules/lang/is_array/README.md",
+      "source": "documentation/enforce/rules/lang/is_array/README.md",
       "title": "lang/isArray - PASSABLE",
       "pageTitle": "lang/isArray",
       "slug": "enforceruleslangis_array",
@@ -742,7 +747,7 @@
       ]
     },
     "enforce/rules/lang/is_string/index.html": {
-      "source": "docs/enforce/rules/lang/is_string/README.md",
+      "source": "documentation/enforce/rules/lang/is_string/README.md",
       "title": "lang/isString - PASSABLE",
       "pageTitle": "lang/isString",
       "slug": "enforceruleslangis_string",
@@ -770,7 +775,7 @@
       ]
     },
     "enforce/rules/lang/is_number/index.html": {
-      "source": "docs/enforce/rules/lang/is_number/README.md",
+      "source": "documentation/enforce/rules/lang/is_number/README.md",
       "title": "lang/isNumber - PASSABLE",
       "pageTitle": "lang/isNumber",
       "slug": "enforceruleslangis_number",
@@ -798,7 +803,7 @@
       ]
     },
     "enforce/rules/size/is_empty/index.html": {
-      "source": "docs/enforce/rules/size/is_empty/README.md",
+      "source": "documentation/enforce/rules/size/is_empty/README.md",
       "title": "size/isEmpty - PASSABLE",
       "pageTitle": "size/isEmpty",
       "slug": "enforcerulessizeis_empty",
@@ -826,7 +831,7 @@
       ]
     },
     "enforce/rules/size/larger_than/index.html": {
-      "source": "docs/enforce/rules/size/larger_than/README.md",
+      "source": "documentation/enforce/rules/size/larger_than/README.md",
       "title": "size/largerThan - PASSABLE",
       "pageTitle": "size/largerThan",
       "slug": "enforcerulessizelarger_than",
@@ -854,7 +859,7 @@
       ]
     },
     "enforce/rules/size/larger_than_or_equals/index.html": {
-      "source": "docs/enforce/rules/size/larger_than_or_equals/README.md",
+      "source": "documentation/enforce/rules/size/larger_than_or_equals/README.md",
       "title": "size/largerThanOrEquals - PASSABLE",
       "pageTitle": "size/largerThanOrEquals",
       "slug": "enforcerulessizelarger_than_or_equals",
@@ -882,7 +887,7 @@
       ]
     },
     "enforce/rules/size/size_equals/index.html": {
-      "source": "docs/enforce/rules/size/size_equals/README.md",
+      "source": "documentation/enforce/rules/size/size_equals/README.md",
       "title": "size/sizeEquals - PASSABLE",
       "pageTitle": "size/sizeEquals",
       "slug": "enforcerulessizesize_equals",
@@ -910,7 +915,7 @@
       ]
     },
     "enforce/rules/size/smaller_than/index.html": {
-      "source": "docs/enforce/rules/size/smaller_than/README.md",
+      "source": "documentation/enforce/rules/size/smaller_than/README.md",
       "title": "size/smallerThan - PASSABLE",
       "pageTitle": "size/smallerThan",
       "slug": "enforcerulessizesmaller_than",
@@ -938,7 +943,7 @@
       ]
     },
     "enforce/rules/size/smaller_than_or_equals/index.html": {
-      "source": "docs/enforce/rules/size/smaller_than_or_equals/README.md",
+      "source": "documentation/enforce/rules/size/smaller_than_or_equals/README.md",
       "title": "size/smallerThanOrEquals - PASSABLE",
       "pageTitle": "size/smallerThanOrEquals",
       "slug": "enforcerulessizesmaller_than_or_equals",
@@ -966,7 +971,7 @@
       ]
     },
     "enforce/rules/custom.html": {
-      "source": "docs/enforce/rules/custom.md",
+      "source": "documentation/enforce/rules/custom.md",
       "title": "Custom Enforce Rules - PASSABLE",
       "pageTitle": "Custom Enforce Rules",
       "slug": "enforcerulescustom",
@@ -980,43 +985,48 @@
           "title": "Per Test Custom Rules",
           "depth": 2,
           "id": "per-test-custom-rules"
+        },
+        {
+          "title": "Inline Custom Rules",
+          "depth": 2,
+          "id": "inline-custom-rules"
         }
       ]
     },
     "compatability/assertions.html": {
-      "source": "docs/compatability/assertions.md",
+      "source": "documentation/compatability/assertions.md",
       "title": "Using with assertions libraries - PASSABLE",
       "pageTitle": "Using with assertions libraries",
       "slug": "compatabilityassertions"
     }
   },
   "sources": {
-    "docs/MAIN.md": "index.html",
-    "docs/getting_started/installation.md": "getting_started/installation.html",
-    "docs/getting_started/writing_tests.md": "getting_started/writing_tests.html",
-    "docs/getting_started/response.md": "getting_started/response.html",
-    "docs/getting_started/params.md": "getting_started/params.html",
-    "docs/getting_started/pass/index.md": "getting_started/pass/index.html",
-    "docs/getting_started/pass/how_to_fail.md": "getting_started/pass/how_to_fail.html",
-    "docs/getting_started/pass/warn_only_passes.md": "getting_started/pass/warn_only_passes.html",
-    "docs/getting_started/pass/specific.md": "getting_started/pass/specific.html",
-    "docs/enforce/README.md": "enforce/index.html",
-    "docs/enforce/relationships/README.md": "enforce/relationships/index.html",
-    "docs/enforce/rules/README.md": "enforce/rules/index.html",
-    "docs/enforce/rules/content/matches/README.md": "enforce/rules/content/matches/index.html",
-    "docs/enforce/rules/content/inside/README.md": "enforce/rules/content/inside/index.html",
-    "docs/enforce/rules/lang/is_array/README.md": "enforce/rules/lang/is_array/index.html",
-    "docs/enforce/rules/lang/is_string/README.md": "enforce/rules/lang/is_string/index.html",
-    "docs/enforce/rules/lang/is_number/README.md": "enforce/rules/lang/is_number/index.html",
-    "docs/enforce/rules/size/is_empty/README.md": "enforce/rules/size/is_empty/index.html",
-    "docs/enforce/rules/size/larger_than/README.md": "enforce/rules/size/larger_than/index.html",
-    "docs/enforce/rules/size/larger_than_or_equals/README.md": "enforce/rules/size/larger_than_or_equals/index.html",
-    "docs/enforce/rules/size/size_equals/README.md": "enforce/rules/size/size_equals/index.html",
-    "docs/enforce/rules/size/smaller_than/README.md": "enforce/rules/size/smaller_than/index.html",
-    "docs/enforce/rules/size/smaller_than_or_equals/README.md": "enforce/rules/size/smaller_than_or_equals/index.html",
-    "docs/enforce/rules/custom.md": "enforce/rules/custom.html",
-    "docs/compatability/assertions.md": "compatability/assertions.html",
-    "docs/assets/passable-api.jpg": "assets/passable-api.jpg",
-    "docs/assets/passable_diagram.png": "assets/passable_diagram.png"
+    "documentation/MAIN.md": "index.html",
+    "documentation/getting_started/installation.md": "getting_started/installation.html",
+    "documentation/getting_started/writing_tests.md": "getting_started/writing_tests.html",
+    "documentation/getting_started/response.md": "getting_started/response.html",
+    "documentation/getting_started/params.md": "getting_started/params.html",
+    "documentation/getting_started/pass/index.md": "getting_started/pass/index.html",
+    "documentation/getting_started/pass/how_to_fail.md": "getting_started/pass/how_to_fail.html",
+    "documentation/getting_started/pass/warn_only_passes.md": "getting_started/pass/warn_only_passes.html",
+    "documentation/getting_started/pass/specific.md": "getting_started/pass/specific.html",
+    "documentation/enforce/README.md": "enforce/index.html",
+    "documentation/enforce/relationships/README.md": "enforce/relationships/index.html",
+    "documentation/enforce/rules/README.md": "enforce/rules/index.html",
+    "documentation/enforce/rules/content/matches/README.md": "enforce/rules/content/matches/index.html",
+    "documentation/enforce/rules/content/inside/README.md": "enforce/rules/content/inside/index.html",
+    "documentation/enforce/rules/lang/is_array/README.md": "enforce/rules/lang/is_array/index.html",
+    "documentation/enforce/rules/lang/is_string/README.md": "enforce/rules/lang/is_string/index.html",
+    "documentation/enforce/rules/lang/is_number/README.md": "enforce/rules/lang/is_number/index.html",
+    "documentation/enforce/rules/size/is_empty/README.md": "enforce/rules/size/is_empty/index.html",
+    "documentation/enforce/rules/size/larger_than/README.md": "enforce/rules/size/larger_than/index.html",
+    "documentation/enforce/rules/size/larger_than_or_equals/README.md": "enforce/rules/size/larger_than_or_equals/index.html",
+    "documentation/enforce/rules/size/size_equals/README.md": "enforce/rules/size/size_equals/index.html",
+    "documentation/enforce/rules/size/smaller_than/README.md": "enforce/rules/size/smaller_than/index.html",
+    "documentation/enforce/rules/size/smaller_than_or_equals/README.md": "enforce/rules/size/smaller_than_or_equals/index.html",
+    "documentation/enforce/rules/custom.md": "enforce/rules/custom.html",
+    "documentation/compatability/assertions.md": "compatability/assertions.html",
+    "documentation/assets/passable-api.jpg": "assets/passable-api.jpg",
+    "documentation/assets/passable_diagram.png": "assets/passable_diagram.png"
   }
 }
