@@ -1,0 +1,1140 @@
+{
+  "toc": {
+    "sections": [
+      {
+        "title": "PASSABLE 5.10.1",
+        "source": "documentation/MAIN.md",
+        "url": "index.html",
+        "slug": "index",
+        "headings": [
+          {
+            "title": "What is Passable?",
+            "depth": 2,
+            "id": "what-is-passable"
+          },
+          {
+            "title": "Key Benefits",
+            "depth": 2,
+            "id": "key-benefits",
+            "headings": [
+              {
+                "title": "Structured Validations",
+                "depth": 3,
+                "id": "structured-validations"
+              },
+              {
+                "title": "Isomorphic Validations",
+                "depth": 3,
+                "id": "isomorphic-validations"
+              }
+            ]
+          }
+        ],
+        "sections": [
+          {
+            "title": "Getting Started",
+            "sections": [
+              {
+                "title": "Installation",
+                "source": "documentation/getting_started/installation.md",
+                "url": "getting_started/installation.html",
+                "slug": "getting_startedinstallation"
+              },
+              {
+                "title": "Writing tests",
+                "source": "documentation/getting_started/writing_tests.md",
+                "url": "getting_started/writing_tests.html",
+                "slug": "getting_startedwriting_tests"
+              },
+              {
+                "title": "The result object",
+                "source": "documentation/getting_started/result.md",
+                "url": "getting_started/result.html",
+                "slug": "getting_startedresult",
+                "headings": [
+                  {
+                    "title": "Properties",
+                    "depth": 2,
+                    "id": "properties",
+                    "headings": [
+                      {
+                        "title": "`testsPerformed` field structure",
+                        "depth": 3,
+                        "id": "testsperformed-field-structure"
+                      }
+                    ]
+                  },
+                  {
+                    "title": "`getErrors` and `getWarnings` functions",
+                    "depth": 2,
+                    "id": "geterrors-and-getwarnings-functions"
+                  },
+                  {
+                    "title": "Why No `isValid` prop?",
+                    "depth": 2,
+                    "id": "why-no-isvalid-prop"
+                  },
+                  {
+                    "title": "Passing Example",
+                    "depth": 2,
+                    "id": "passing-example"
+                  },
+                  {
+                    "title": "Failing Example",
+                    "depth": 2,
+                    "id": "failing-example"
+                  }
+                ]
+              },
+              {
+                "title": "Passable Parameters",
+                "source": "documentation/getting_started/params.md",
+                "url": "getting_started/params.html",
+                "slug": "getting_startedparams"
+              }
+            ]
+          },
+          {
+            "title": "The pass Function",
+            "source": "documentation/pass/index.md",
+            "url": "pass/index.html",
+            "slug": "pass",
+            "headings": [
+              {
+                "title": "Table of Contents",
+                "depth": 3,
+                "id": "table-of-contents"
+              }
+            ],
+            "sections": [
+              {
+                "title": "How to fail a pass",
+                "source": "documentation/pass/how_to_fail.md",
+                "url": "pass/how_to_fail.html",
+                "slug": "passhow_to_fail"
+              },
+              {
+                "title": "Warn only passes",
+                "source": "documentation/pass/warn_only_passes.md",
+                "url": "pass/warn_only_passes.html",
+                "slug": "passwarn_only_passes"
+              },
+              {
+                "title": "Running a specific pass",
+                "source": "documentation/pass/specific.md",
+                "url": "pass/specific.html",
+                "slug": "passspecific"
+              }
+            ]
+          },
+          {
+            "title": "The validate Function",
+            "source": "documentation/validate/README.md",
+            "url": "validate/index.html",
+            "slug": "validate",
+            "headings": [
+              {
+                "title": "Usage",
+                "depth": 2,
+                "id": "usage"
+              },
+              {
+                "title": "The response object",
+                "depth": 2,
+                "id": "the-response-object"
+              }
+            ]
+          },
+          {
+            "title": "The enforce Function",
+            "source": "documentation/enforce/README.md",
+            "url": "enforce/index.html",
+            "slug": "enforce",
+            "headings": [
+              {
+                "title": "Consuming `enforce`",
+                "depth": 2,
+                "id": "consuming-enforce"
+              },
+              {
+                "title": "Chaining enforce functions",
+                "depth": 2,
+                "id": "chaining-enforce-functions",
+                "headings": [
+                  {
+                    "title": "Table of Contents",
+                    "depth": 3,
+                    "id": "table-of-contents"
+                  }
+                ]
+              }
+            ],
+            "sections": [
+              {
+                "title": "Enforce Rules",
+                "source": "documentation/enforce/rules/README.md",
+                "url": "enforce/rules/index.html",
+                "slug": "enforcerules",
+                "sections": [
+                  {
+                    "title": "content/matches",
+                    "source": "documentation/enforce/rules/content/matches/README.md",
+                    "url": "enforce/rules/content/matches/index.html",
+                    "slug": "enforcerulescontentmatches",
+                    "headings": [
+                      {
+                        "title": "Description",
+                        "depth": 2,
+                        "id": "description"
+                      },
+                      {
+                        "title": "Arguments",
+                        "depth": 2,
+                        "id": "arguments"
+                      },
+                      {
+                        "title": "Response",
+                        "depth": 2,
+                        "id": "response"
+                      },
+                      {
+                        "title": "usage examples:",
+                        "depth": 2,
+                        "id": "usage-examples:"
+                      }
+                    ]
+                  },
+                  {
+                    "title": "content/inside",
+                    "source": "documentation/enforce/rules/content/inside/README.md",
+                    "url": "enforce/rules/content/inside/index.html",
+                    "slug": "enforcerulescontentinside",
+                    "headings": [
+                      {
+                        "title": "Description",
+                        "depth": 2,
+                        "id": "description"
+                      },
+                      {
+                        "title": "Arguments",
+                        "depth": 2,
+                        "id": "arguments"
+                      },
+                      {
+                        "title": "Response",
+                        "depth": 2,
+                        "id": "response"
+                      },
+                      {
+                        "title": "usage examples:",
+                        "depth": 2,
+                        "id": "usage-examples:",
+                        "headings": [
+                          {
+                            "title": "inside: array",
+                            "depth": 3,
+                            "id": "inside:-array"
+                          },
+                          {
+                            "title": "inside: string",
+                            "depth": 3,
+                            "id": "inside:-string"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "title": "lang/isArray",
+                    "source": "documentation/enforce/rules/lang/is_array/README.md",
+                    "url": "enforce/rules/lang/is_array/index.html",
+                    "slug": "enforceruleslangis_array",
+                    "headings": [
+                      {
+                        "title": "Description",
+                        "depth": 2,
+                        "id": "description"
+                      },
+                      {
+                        "title": "Arguments",
+                        "depth": 2,
+                        "id": "arguments"
+                      },
+                      {
+                        "title": "Response",
+                        "depth": 2,
+                        "id": "response"
+                      },
+                      {
+                        "title": "usage examples:",
+                        "depth": 2,
+                        "id": "usage-examples:"
+                      }
+                    ]
+                  },
+                  {
+                    "title": "lang/isString",
+                    "source": "documentation/enforce/rules/lang/is_string/README.md",
+                    "url": "enforce/rules/lang/is_string/index.html",
+                    "slug": "enforceruleslangis_string",
+                    "headings": [
+                      {
+                        "title": "Description",
+                        "depth": 2,
+                        "id": "description"
+                      },
+                      {
+                        "title": "Arguments",
+                        "depth": 2,
+                        "id": "arguments"
+                      },
+                      {
+                        "title": "Response",
+                        "depth": 2,
+                        "id": "response"
+                      },
+                      {
+                        "title": "usage examples:",
+                        "depth": 2,
+                        "id": "usage-examples:"
+                      }
+                    ]
+                  },
+                  {
+                    "title": "lang/isNumber",
+                    "source": "documentation/enforce/rules/lang/is_number/README.md",
+                    "url": "enforce/rules/lang/is_number/index.html",
+                    "slug": "enforceruleslangis_number",
+                    "headings": [
+                      {
+                        "title": "Description",
+                        "depth": 2,
+                        "id": "description"
+                      },
+                      {
+                        "title": "Arguments",
+                        "depth": 2,
+                        "id": "arguments"
+                      },
+                      {
+                        "title": "Response",
+                        "depth": 2,
+                        "id": "response"
+                      },
+                      {
+                        "title": "usage examples:",
+                        "depth": 2,
+                        "id": "usage-examples:"
+                      }
+                    ]
+                  },
+                  {
+                    "title": "size/isEmpty",
+                    "source": "documentation/enforce/rules/size/is_empty/README.md",
+                    "url": "enforce/rules/size/is_empty/index.html",
+                    "slug": "enforcerulessizeis_empty",
+                    "headings": [
+                      {
+                        "title": "Description",
+                        "depth": 2,
+                        "id": "description"
+                      },
+                      {
+                        "title": "Arguments",
+                        "depth": 2,
+                        "id": "arguments"
+                      },
+                      {
+                        "title": "Response",
+                        "depth": 2,
+                        "id": "response"
+                      },
+                      {
+                        "title": "usage examples:",
+                        "depth": 2,
+                        "id": "usage-examples:"
+                      }
+                    ]
+                  },
+                  {
+                    "title": "size/largerThan",
+                    "source": "documentation/enforce/rules/size/larger_than/README.md",
+                    "url": "enforce/rules/size/larger_than/index.html",
+                    "slug": "enforcerulessizelarger_than",
+                    "headings": [
+                      {
+                        "title": "Description",
+                        "depth": 2,
+                        "id": "description"
+                      },
+                      {
+                        "title": "Arguments",
+                        "depth": 2,
+                        "id": "arguments"
+                      },
+                      {
+                        "title": "Response",
+                        "depth": 2,
+                        "id": "response"
+                      },
+                      {
+                        "title": "usage examples:",
+                        "depth": 2,
+                        "id": "usage-examples:"
+                      }
+                    ]
+                  },
+                  {
+                    "title": "size/largerThanOrEquals",
+                    "source": "documentation/enforce/rules/size/larger_than_or_equals/README.md",
+                    "url": "enforce/rules/size/larger_than_or_equals/index.html",
+                    "slug": "enforcerulessizelarger_than_or_equals",
+                    "headings": [
+                      {
+                        "title": "Description",
+                        "depth": 2,
+                        "id": "description"
+                      },
+                      {
+                        "title": "Arguments",
+                        "depth": 2,
+                        "id": "arguments"
+                      },
+                      {
+                        "title": "Response",
+                        "depth": 2,
+                        "id": "response"
+                      },
+                      {
+                        "title": "usage examples:",
+                        "depth": 2,
+                        "id": "usage-examples:"
+                      }
+                    ]
+                  },
+                  {
+                    "title": "size/sizeEquals",
+                    "source": "documentation/enforce/rules/size/size_equals/README.md",
+                    "url": "enforce/rules/size/size_equals/index.html",
+                    "slug": "enforcerulessizesize_equals",
+                    "headings": [
+                      {
+                        "title": "Description",
+                        "depth": 2,
+                        "id": "description"
+                      },
+                      {
+                        "title": "Arguments",
+                        "depth": 2,
+                        "id": "arguments"
+                      },
+                      {
+                        "title": "Response",
+                        "depth": 2,
+                        "id": "response"
+                      },
+                      {
+                        "title": "usage examples:",
+                        "depth": 2,
+                        "id": "usage-examples:"
+                      }
+                    ]
+                  },
+                  {
+                    "title": "size/smallerThan",
+                    "source": "documentation/enforce/rules/size/smaller_than/README.md",
+                    "url": "enforce/rules/size/smaller_than/index.html",
+                    "slug": "enforcerulessizesmaller_than",
+                    "headings": [
+                      {
+                        "title": "Description",
+                        "depth": 2,
+                        "id": "description"
+                      },
+                      {
+                        "title": "Arguments",
+                        "depth": 2,
+                        "id": "arguments"
+                      },
+                      {
+                        "title": "Response",
+                        "depth": 2,
+                        "id": "response"
+                      },
+                      {
+                        "title": "usage examples:",
+                        "depth": 2,
+                        "id": "usage-examples:"
+                      }
+                    ]
+                  },
+                  {
+                    "title": "size/smallerThanOrEquals",
+                    "source": "documentation/enforce/rules/size/smaller_than_or_equals/README.md",
+                    "url": "enforce/rules/size/smaller_than_or_equals/index.html",
+                    "slug": "enforcerulessizesmaller_than_or_equals",
+                    "headings": [
+                      {
+                        "title": "Description",
+                        "depth": 2,
+                        "id": "description"
+                      },
+                      {
+                        "title": "Arguments",
+                        "depth": 2,
+                        "id": "arguments"
+                      },
+                      {
+                        "title": "Response",
+                        "depth": 2,
+                        "id": "response"
+                      },
+                      {
+                        "title": "usage examples:",
+                        "depth": 2,
+                        "id": "usage-examples:"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "Custom Enforce Rules",
+                "source": "documentation/enforce/rules/custom.md",
+                "url": "enforce/rules/custom.html",
+                "slug": "enforcerulescustom",
+                "headings": [
+                  {
+                    "title": "Global Custom Rules",
+                    "depth": 2,
+                    "id": "global-custom-rules"
+                  },
+                  {
+                    "title": "Per Test Custom Rules",
+                    "depth": 2,
+                    "id": "per-test-custom-rules"
+                  },
+                  {
+                    "title": "Inline Custom Rules",
+                    "depth": 2,
+                    "id": "inline-custom-rules"
+                  }
+                ]
+              },
+              {
+                "title": "Compound Enforcements",
+                "source": "documentation/enforce/compound/README.md",
+                "url": "enforce/compound/index.html",
+                "slug": "enforcecompound",
+                "headings": [
+                  {
+                    "title": "allOf  |  AND Relationship",
+                    "depth": 2,
+                    "id": "allof-or-and-relationship"
+                  },
+                  {
+                    "title": "anyOf  |  OR Relationship",
+                    "depth": 2,
+                    "id": "anyof-or-or-relationship"
+                  },
+                  {
+                    "title": "noneOf  |  AND NOT Relationship",
+                    "depth": 2,
+                    "id": "noneof-or-and-not-relationship"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Using with assertions libraries",
+            "source": "documentation/compatability/assertions.md",
+            "url": "compatability/assertions.html",
+            "slug": "compatabilityassertions"
+          }
+        ]
+      }
+    ]
+  },
+  "index": {
+    "index.html": {
+      "source": "documentation/MAIN.md",
+      "title": "PASSABLE 5.10.1",
+      "pageTitle": "PASSABLE 5.10.1",
+      "slug": "index",
+      "headings": [
+        {
+          "title": "What is Passable?",
+          "depth": 2,
+          "id": "what-is-passable"
+        },
+        {
+          "title": "Key Benefits",
+          "depth": 2,
+          "id": "key-benefits",
+          "headings": [
+            {
+              "title": "Structured Validations",
+              "depth": 3,
+              "id": "structured-validations"
+            },
+            {
+              "title": "Isomorphic Validations",
+              "depth": 3,
+              "id": "isomorphic-validations"
+            }
+          ]
+        }
+      ]
+    },
+    "getting_started/installation.html": {
+      "source": "documentation/getting_started/installation.md",
+      "title": "Installation - PASSABLE 5.10.1",
+      "pageTitle": "Installation",
+      "slug": "getting_startedinstallation"
+    },
+    "getting_started/writing_tests.html": {
+      "source": "documentation/getting_started/writing_tests.md",
+      "title": "Writing tests - PASSABLE 5.10.1",
+      "pageTitle": "Writing tests",
+      "slug": "getting_startedwriting_tests"
+    },
+    "getting_started/result.html": {
+      "source": "documentation/getting_started/result.md",
+      "title": "The result object - PASSABLE 5.10.1",
+      "pageTitle": "The result object",
+      "slug": "getting_startedresult",
+      "headings": [
+        {
+          "title": "Properties",
+          "depth": 2,
+          "id": "properties",
+          "headings": [
+            {
+              "title": "`testsPerformed` field structure",
+              "depth": 3,
+              "id": "testsperformed-field-structure"
+            }
+          ]
+        },
+        {
+          "title": "`getErrors` and `getWarnings` functions",
+          "depth": 2,
+          "id": "geterrors-and-getwarnings-functions"
+        },
+        {
+          "title": "Why No `isValid` prop?",
+          "depth": 2,
+          "id": "why-no-isvalid-prop"
+        },
+        {
+          "title": "Passing Example",
+          "depth": 2,
+          "id": "passing-example"
+        },
+        {
+          "title": "Failing Example",
+          "depth": 2,
+          "id": "failing-example"
+        }
+      ]
+    },
+    "getting_started/params.html": {
+      "source": "documentation/getting_started/params.md",
+      "title": "Passable Parameters - PASSABLE 5.10.1",
+      "pageTitle": "Passable Parameters",
+      "slug": "getting_startedparams"
+    },
+    "pass/index.html": {
+      "source": "documentation/pass/index.md",
+      "title": "The pass Function - PASSABLE 5.10.1",
+      "pageTitle": "The pass Function",
+      "slug": "pass",
+      "headings": [
+        {
+          "title": "Table of Contents",
+          "depth": 3,
+          "id": "table-of-contents"
+        }
+      ]
+    },
+    "pass/how_to_fail.html": {
+      "source": "documentation/pass/how_to_fail.md",
+      "title": "How to fail a pass - PASSABLE 5.10.1",
+      "pageTitle": "How to fail a pass",
+      "slug": "passhow_to_fail"
+    },
+    "pass/warn_only_passes.html": {
+      "source": "documentation/pass/warn_only_passes.md",
+      "title": "Warn only passes - PASSABLE 5.10.1",
+      "pageTitle": "Warn only passes",
+      "slug": "passwarn_only_passes"
+    },
+    "pass/specific.html": {
+      "source": "documentation/pass/specific.md",
+      "title": "Running a specific pass - PASSABLE 5.10.1",
+      "pageTitle": "Running a specific pass",
+      "slug": "passspecific"
+    },
+    "validate/index.html": {
+      "source": "documentation/validate/README.md",
+      "title": "The validate Function - PASSABLE 5.10.1",
+      "pageTitle": "The validate Function",
+      "slug": "validate",
+      "headings": [
+        {
+          "title": "Usage",
+          "depth": 2,
+          "id": "usage"
+        },
+        {
+          "title": "The response object",
+          "depth": 2,
+          "id": "the-response-object"
+        }
+      ]
+    },
+    "enforce/index.html": {
+      "source": "documentation/enforce/README.md",
+      "title": "The enforce Function - PASSABLE 5.10.1",
+      "pageTitle": "The enforce Function",
+      "slug": "enforce",
+      "headings": [
+        {
+          "title": "Consuming `enforce`",
+          "depth": 2,
+          "id": "consuming-enforce"
+        },
+        {
+          "title": "Chaining enforce functions",
+          "depth": 2,
+          "id": "chaining-enforce-functions",
+          "headings": [
+            {
+              "title": "Table of Contents",
+              "depth": 3,
+              "id": "table-of-contents"
+            }
+          ]
+        }
+      ]
+    },
+    "enforce/rules/index.html": {
+      "source": "documentation/enforce/rules/README.md",
+      "title": "Enforce Rules - PASSABLE 5.10.1",
+      "pageTitle": "Enforce Rules",
+      "slug": "enforcerules"
+    },
+    "enforce/rules/content/matches/index.html": {
+      "source": "documentation/enforce/rules/content/matches/README.md",
+      "title": "content/matches - PASSABLE 5.10.1",
+      "pageTitle": "content/matches",
+      "slug": "enforcerulescontentmatches",
+      "headings": [
+        {
+          "title": "Description",
+          "depth": 2,
+          "id": "description"
+        },
+        {
+          "title": "Arguments",
+          "depth": 2,
+          "id": "arguments"
+        },
+        {
+          "title": "Response",
+          "depth": 2,
+          "id": "response"
+        },
+        {
+          "title": "usage examples:",
+          "depth": 2,
+          "id": "usage-examples:"
+        }
+      ]
+    },
+    "enforce/rules/content/inside/index.html": {
+      "source": "documentation/enforce/rules/content/inside/README.md",
+      "title": "content/inside - PASSABLE 5.10.1",
+      "pageTitle": "content/inside",
+      "slug": "enforcerulescontentinside",
+      "headings": [
+        {
+          "title": "Description",
+          "depth": 2,
+          "id": "description"
+        },
+        {
+          "title": "Arguments",
+          "depth": 2,
+          "id": "arguments"
+        },
+        {
+          "title": "Response",
+          "depth": 2,
+          "id": "response"
+        },
+        {
+          "title": "usage examples:",
+          "depth": 2,
+          "id": "usage-examples:",
+          "headings": [
+            {
+              "title": "inside: array",
+              "depth": 3,
+              "id": "inside:-array"
+            },
+            {
+              "title": "inside: string",
+              "depth": 3,
+              "id": "inside:-string"
+            }
+          ]
+        }
+      ]
+    },
+    "enforce/rules/lang/is_array/index.html": {
+      "source": "documentation/enforce/rules/lang/is_array/README.md",
+      "title": "lang/isArray - PASSABLE 5.10.1",
+      "pageTitle": "lang/isArray",
+      "slug": "enforceruleslangis_array",
+      "headings": [
+        {
+          "title": "Description",
+          "depth": 2,
+          "id": "description"
+        },
+        {
+          "title": "Arguments",
+          "depth": 2,
+          "id": "arguments"
+        },
+        {
+          "title": "Response",
+          "depth": 2,
+          "id": "response"
+        },
+        {
+          "title": "usage examples:",
+          "depth": 2,
+          "id": "usage-examples:"
+        }
+      ]
+    },
+    "enforce/rules/lang/is_string/index.html": {
+      "source": "documentation/enforce/rules/lang/is_string/README.md",
+      "title": "lang/isString - PASSABLE 5.10.1",
+      "pageTitle": "lang/isString",
+      "slug": "enforceruleslangis_string",
+      "headings": [
+        {
+          "title": "Description",
+          "depth": 2,
+          "id": "description"
+        },
+        {
+          "title": "Arguments",
+          "depth": 2,
+          "id": "arguments"
+        },
+        {
+          "title": "Response",
+          "depth": 2,
+          "id": "response"
+        },
+        {
+          "title": "usage examples:",
+          "depth": 2,
+          "id": "usage-examples:"
+        }
+      ]
+    },
+    "enforce/rules/lang/is_number/index.html": {
+      "source": "documentation/enforce/rules/lang/is_number/README.md",
+      "title": "lang/isNumber - PASSABLE 5.10.1",
+      "pageTitle": "lang/isNumber",
+      "slug": "enforceruleslangis_number",
+      "headings": [
+        {
+          "title": "Description",
+          "depth": 2,
+          "id": "description"
+        },
+        {
+          "title": "Arguments",
+          "depth": 2,
+          "id": "arguments"
+        },
+        {
+          "title": "Response",
+          "depth": 2,
+          "id": "response"
+        },
+        {
+          "title": "usage examples:",
+          "depth": 2,
+          "id": "usage-examples:"
+        }
+      ]
+    },
+    "enforce/rules/size/is_empty/index.html": {
+      "source": "documentation/enforce/rules/size/is_empty/README.md",
+      "title": "size/isEmpty - PASSABLE 5.10.1",
+      "pageTitle": "size/isEmpty",
+      "slug": "enforcerulessizeis_empty",
+      "headings": [
+        {
+          "title": "Description",
+          "depth": 2,
+          "id": "description"
+        },
+        {
+          "title": "Arguments",
+          "depth": 2,
+          "id": "arguments"
+        },
+        {
+          "title": "Response",
+          "depth": 2,
+          "id": "response"
+        },
+        {
+          "title": "usage examples:",
+          "depth": 2,
+          "id": "usage-examples:"
+        }
+      ]
+    },
+    "enforce/rules/size/larger_than/index.html": {
+      "source": "documentation/enforce/rules/size/larger_than/README.md",
+      "title": "size/largerThan - PASSABLE 5.10.1",
+      "pageTitle": "size/largerThan",
+      "slug": "enforcerulessizelarger_than",
+      "headings": [
+        {
+          "title": "Description",
+          "depth": 2,
+          "id": "description"
+        },
+        {
+          "title": "Arguments",
+          "depth": 2,
+          "id": "arguments"
+        },
+        {
+          "title": "Response",
+          "depth": 2,
+          "id": "response"
+        },
+        {
+          "title": "usage examples:",
+          "depth": 2,
+          "id": "usage-examples:"
+        }
+      ]
+    },
+    "enforce/rules/size/larger_than_or_equals/index.html": {
+      "source": "documentation/enforce/rules/size/larger_than_or_equals/README.md",
+      "title": "size/largerThanOrEquals - PASSABLE 5.10.1",
+      "pageTitle": "size/largerThanOrEquals",
+      "slug": "enforcerulessizelarger_than_or_equals",
+      "headings": [
+        {
+          "title": "Description",
+          "depth": 2,
+          "id": "description"
+        },
+        {
+          "title": "Arguments",
+          "depth": 2,
+          "id": "arguments"
+        },
+        {
+          "title": "Response",
+          "depth": 2,
+          "id": "response"
+        },
+        {
+          "title": "usage examples:",
+          "depth": 2,
+          "id": "usage-examples:"
+        }
+      ]
+    },
+    "enforce/rules/size/size_equals/index.html": {
+      "source": "documentation/enforce/rules/size/size_equals/README.md",
+      "title": "size/sizeEquals - PASSABLE 5.10.1",
+      "pageTitle": "size/sizeEquals",
+      "slug": "enforcerulessizesize_equals",
+      "headings": [
+        {
+          "title": "Description",
+          "depth": 2,
+          "id": "description"
+        },
+        {
+          "title": "Arguments",
+          "depth": 2,
+          "id": "arguments"
+        },
+        {
+          "title": "Response",
+          "depth": 2,
+          "id": "response"
+        },
+        {
+          "title": "usage examples:",
+          "depth": 2,
+          "id": "usage-examples:"
+        }
+      ]
+    },
+    "enforce/rules/size/smaller_than/index.html": {
+      "source": "documentation/enforce/rules/size/smaller_than/README.md",
+      "title": "size/smallerThan - PASSABLE 5.10.1",
+      "pageTitle": "size/smallerThan",
+      "slug": "enforcerulessizesmaller_than",
+      "headings": [
+        {
+          "title": "Description",
+          "depth": 2,
+          "id": "description"
+        },
+        {
+          "title": "Arguments",
+          "depth": 2,
+          "id": "arguments"
+        },
+        {
+          "title": "Response",
+          "depth": 2,
+          "id": "response"
+        },
+        {
+          "title": "usage examples:",
+          "depth": 2,
+          "id": "usage-examples:"
+        }
+      ]
+    },
+    "enforce/rules/size/smaller_than_or_equals/index.html": {
+      "source": "documentation/enforce/rules/size/smaller_than_or_equals/README.md",
+      "title": "size/smallerThanOrEquals - PASSABLE 5.10.1",
+      "pageTitle": "size/smallerThanOrEquals",
+      "slug": "enforcerulessizesmaller_than_or_equals",
+      "headings": [
+        {
+          "title": "Description",
+          "depth": 2,
+          "id": "description"
+        },
+        {
+          "title": "Arguments",
+          "depth": 2,
+          "id": "arguments"
+        },
+        {
+          "title": "Response",
+          "depth": 2,
+          "id": "response"
+        },
+        {
+          "title": "usage examples:",
+          "depth": 2,
+          "id": "usage-examples:"
+        }
+      ]
+    },
+    "enforce/rules/custom.html": {
+      "source": "documentation/enforce/rules/custom.md",
+      "title": "Custom Enforce Rules - PASSABLE 5.10.1",
+      "pageTitle": "Custom Enforce Rules",
+      "slug": "enforcerulescustom",
+      "headings": [
+        {
+          "title": "Global Custom Rules",
+          "depth": 2,
+          "id": "global-custom-rules"
+        },
+        {
+          "title": "Per Test Custom Rules",
+          "depth": 2,
+          "id": "per-test-custom-rules"
+        },
+        {
+          "title": "Inline Custom Rules",
+          "depth": 2,
+          "id": "inline-custom-rules"
+        }
+      ]
+    },
+    "enforce/compound/index.html": {
+      "source": "documentation/enforce/compound/README.md",
+      "title": "Compound Enforcements - PASSABLE 5.10.1",
+      "pageTitle": "Compound Enforcements",
+      "slug": "enforcecompound",
+      "headings": [
+        {
+          "title": "allOf  |  AND Relationship",
+          "depth": 2,
+          "id": "allof-or-and-relationship"
+        },
+        {
+          "title": "anyOf  |  OR Relationship",
+          "depth": 2,
+          "id": "anyof-or-or-relationship"
+        },
+        {
+          "title": "noneOf  |  AND NOT Relationship",
+          "depth": 2,
+          "id": "noneof-or-and-not-relationship"
+        }
+      ]
+    },
+    "compatability/assertions.html": {
+      "source": "documentation/compatability/assertions.md",
+      "title": "Using with assertions libraries - PASSABLE 5.10.1",
+      "pageTitle": "Using with assertions libraries",
+      "slug": "compatabilityassertions"
+    }
+  },
+  "sources": {
+    "documentation/MAIN.md": "index.html",
+    "documentation/getting_started/installation.md": "getting_started/installation.html",
+    "documentation/getting_started/writing_tests.md": "getting_started/writing_tests.html",
+    "documentation/getting_started/result.md": "getting_started/result.html",
+    "documentation/getting_started/params.md": "getting_started/params.html",
+    "documentation/pass/index.md": "pass/index.html",
+    "documentation/pass/how_to_fail.md": "pass/how_to_fail.html",
+    "documentation/pass/warn_only_passes.md": "pass/warn_only_passes.html",
+    "documentation/pass/specific.md": "pass/specific.html",
+    "documentation/validate/README.md": "validate/index.html",
+    "documentation/enforce/README.md": "enforce/index.html",
+    "documentation/enforce/rules/README.md": "enforce/rules/index.html",
+    "documentation/enforce/rules/content/matches/README.md": "enforce/rules/content/matches/index.html",
+    "documentation/enforce/rules/content/inside/README.md": "enforce/rules/content/inside/index.html",
+    "documentation/enforce/rules/lang/is_array/README.md": "enforce/rules/lang/is_array/index.html",
+    "documentation/enforce/rules/lang/is_string/README.md": "enforce/rules/lang/is_string/index.html",
+    "documentation/enforce/rules/lang/is_number/README.md": "enforce/rules/lang/is_number/index.html",
+    "documentation/enforce/rules/size/is_empty/README.md": "enforce/rules/size/is_empty/index.html",
+    "documentation/enforce/rules/size/larger_than/README.md": "enforce/rules/size/larger_than/index.html",
+    "documentation/enforce/rules/size/larger_than_or_equals/README.md": "enforce/rules/size/larger_than_or_equals/index.html",
+    "documentation/enforce/rules/size/size_equals/README.md": "enforce/rules/size/size_equals/index.html",
+    "documentation/enforce/rules/size/smaller_than/README.md": "enforce/rules/size/smaller_than/index.html",
+    "documentation/enforce/rules/size/smaller_than_or_equals/README.md": "enforce/rules/size/smaller_than_or_equals/index.html",
+    "documentation/enforce/rules/custom.md": "enforce/rules/custom.html",
+    "documentation/enforce/compound/README.md": "enforce/compound/index.html",
+    "documentation/compatability/assertions.md": "compatability/assertions.html",
+    "documentation/assets/img/error.svg": "assets/img/error.svg",
+    "documentation/assets/img/logo.png": "assets/img/logo.png",
+    "documentation/assets/img/logo.svg": "assets/img/logo.svg",
+    "documentation/assets/img/passable-api.jpg": "assets/img/passable-api.jpg",
+    "documentation/assets/img/passable_diagram.png": "assets/img/passable_diagram.png",
+    "documentation/assets/img/success.svg": "assets/img/success.svg",
+    "documentation/assets/style/_sidemenu.scss": "assets/style/_sidemenu.scss",
+    "documentation/assets/style/_typography.scss": "assets/style/_typography.scss",
+    "documentation/assets/style/_vars.scss": "assets/style/_vars.scss",
+    "documentation/assets/style/main.css": "assets/style/main.css",
+    "documentation/assets/style/main.scss": "assets/style/main.scss"
+  }
+}

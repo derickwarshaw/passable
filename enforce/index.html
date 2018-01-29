@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/style.css?t=615badd5">
+    <link rel="stylesheet" href="https://unpkg.com/highlight.js@9.12.0/styles/atom-one-light.css">
+    <link rel="stylesheet" href="../assets/style/main.css?t=929bb307">
+    <script src="../assets/script.js?t=42463e55"></script>
+    <title>The enforce Function - PASSABLE 5.10.1</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1 -parent"><a class="link title  link-index" href="../index.html">PASSABLE 5.10.1</a>
+              <ul class="submenu">
+                <li class="menu-item -level-2 -parent"><span class="title">Getting Started</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-getting_startedinstallation" href="../getting_started/installation.html">Installation</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-getting_startedwriting_tests" href="../getting_started/writing_tests.html">Writing tests</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-getting_startedresult" href="../getting_started/result.html">The result object</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-getting_startedparams" href="../getting_started/params.html">Passable Parameters</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2 -parent"><a class="link title  link-pass" href="../pass/index.html">The pass Function</a>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-passhow_to_fail" href="../pass/how_to_fail.html">How to fail a pass</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-passwarn_only_passes" href="../pass/warn_only_passes.html">Warn only passes</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-passspecific" href="../pass/specific.html">Running a specific pass</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-validate" href="../validate/index.html">The validate Function</a>
+                </li>
+                <li class="menu-item -level-2 -parent"><a class="link title -active link-enforce" href="../enforce/index.html">The enforce Function</a>
+                  <ul class="headings heading-list">
+                    <li class="heading-item -depth-2"><a class="hlink link-consuming-enforce" href="#consuming-enforce">Consuming `enforce`</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-chaining-enforce-functions" href="#chaining-enforce-functions">Chaining enforce functions</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-table-of-contents" href="#table-of-contents">Table of Contents</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3 -parent"><a class="link title  link-enforcerules" href="../enforce/rules/index.html">Enforce Rules</a>
+                      <ul class="submenu">
+                        <li class="menu-item -level-4"><a class="link title  link-enforcerulescontentmatches" href="../enforce/rules/content/matches/index.html">content/matches</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforcerulescontentinside" href="../enforce/rules/content/inside/index.html">content/inside</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforceruleslangis_array" href="../enforce/rules/lang/is_array/index.html">lang/isArray</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforceruleslangis_string" href="../enforce/rules/lang/is_string/index.html">lang/isString</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforceruleslangis_number" href="../enforce/rules/lang/is_number/index.html">lang/isNumber</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforcerulessizeis_empty" href="../enforce/rules/size/is_empty/index.html">size/isEmpty</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforcerulessizelarger_than" href="../enforce/rules/size/larger_than/index.html">size/largerThan</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforcerulessizelarger_than_or_equals" href="../enforce/rules/size/larger_than_or_equals/index.html">size/largerThanOrEquals</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforcerulessizesize_equals" href="../enforce/rules/size/size_equals/index.html">size/sizeEquals</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforcerulessizesmaller_than" href="../enforce/rules/size/smaller_than/index.html">size/smallerThan</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforcerulessizesmaller_than_or_equals" href="../enforce/rules/size/smaller_than_or_equals/index.html">size/smallerThanOrEquals</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-enforcerulescustom" href="../enforce/rules/custom.html">Custom Enforce Rules</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-enforcecompound" href="../enforce/compound/index.html">Compound Enforcements</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-compatabilityassertions" href="../compatability/assertions.html">Using with assertions libraries</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+      <div class="body page-enforce">
+        <div class="header-nav">
+          <div class="right"><a class="iconlink" href="https://github.com/fiverr/passable" data-title="fiverr/passable">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h1 id="the-enforce-function">The <code>enforce</code> function</h1>
+<p>The <code>enforce</code> function runs your data against different rules and conditions. It is basically, the default assertion method for Passable tests. Its intended use is for validations logic that gets repeated over and over again and shouldn&apos;t be written manually. For each rule, you may also pass either value or an options object that may be used by the function of the rule.</p>
+<p>When using enforce, you do not have to return the result (although you may), each of your enforce tests updates the result of the whole pass. You may also use multiple enforces in the same pass function, they will run in sequence.</p>
+<h2 id="consuming-enforce">Consuming <code>enforce</code></h2>
+<p>You can consume the <code>enforce</code> function in two ways:</p>
+<ul>
+<li>Manually importing <code>enforce</code> along with <code>passable</code></li>
+</ul>
+<blockquote>
+<p>Since 5.10.0</p>
+</blockquote>
+<pre><code class="lang-js"><span class="pl-k">import</span> passable, {enforce} <span class="pl-k">from</span> <span class="pl-s">&apos;passable&apos;</span>;
+
+Passable(<span class="pl-s">&apos;enforcement&apos;</span>, (pass) =&gt; {
+    pass(<span class="pl-s">&apos;test&apos;</span>, <span class="pl-s">&apos;enforce example&apos;</span>, () =&gt; {
+        enforce(<span class="hljs-number">4</span>).isNumber();
+    });
+});
+</code></pre>
+<p>Direct import is the newer standard, and is intended to support future functionality of leaner validation syntax.</p>
+<ul>
+<li><code>enforce</code> is the second argument of the passable function</li>
+</ul>
+<pre><code class="lang-js">Passable(<span class="pl-s">&apos;enforcement&apos;</span>, (pass, enforce) =&gt; {
+    pass(<span class="pl-s">&apos;test&apos;</span>, <span class="pl-s">&apos;enforce example&apos;</span>, () =&gt; {
+        enforce(<span class="hljs-number">4</span>).isNumber();
+    });
+});
+</code></pre>
+<pre><code class="lang-js">Passable(<span class="pl-s">&apos;enforcement&apos;</span>, (pass, enforce) =&gt; {
+    pass(<span class="pl-s">&apos;test&apos;</span>, <span class="pl-s">&apos;multiple enforces&apos;</span>, () =&gt; {
+        enforce(<span class="pl-s">&apos;str1&apos;</span>).allOf({...}).anyOf({...});
+        enforce(<span class="pl-s">&apos;str2&apos;</span>).noneOf({...});
+        enforce(<span class="pl-s">&apos;str3&apos;</span>).anyOf({...});
+        enforce(<span class="hljs-number">4</span>).isNumber();
+    });
+});
+</code></pre>
+<h2 id="chaining-enforce-functions">Chaining enforce functions</h2>
+<p>All of these functions are chainable and can be used more than once in the same chain.
+When chained, all blocks share an <code>AND</code> relationship, meaning that if one block fails, the whole test fails as well.</p>
+<p>All the following are valid uses of enforce.</p>
+<pre><code class="lang-js">enforce([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>]).anyOf({
+    <span class="hljs-attr">largerThan</span>: <span class="hljs-number">5</span>, <span class="pl-c">// in anyOf - this one is enough to set the anyOf block to true</span>
+    smallerThan: <span class="hljs-number">6</span>,
+}).noneOf({
+    <span class="hljs-attr">isString</span>: <span class="pl-c1">true</span>, <span class="pl-c">// in noneOf, all must be false</span>
+    isNumber: <span class="pl-c1">true</span>
+}).isArray(); <span class="pl-c">// true</span>
+</code></pre>
+<pre><code class="lang-js">enforce(<span class="pl-s">&apos;North Dakota, por favor&apos;</span>).noneOf({
+    <span class="hljs-attr">largerThan</span>: <span class="hljs-number">5</span>,
+    <span class="hljs-attr">smallerThan</span>: <span class="hljs-number">2</span>,
+    <span class="hljs-attr">matches</span>: <span class="hljs-regexp">/[0-9]/</span>
+}); <span class="pl-c">// false</span>
+</code></pre>
+<pre><code class="lang-js">enforce(<span class="pl-s">&apos;Toto, I\&apos;ve a feeling we\&apos;re not in Kansas anymore&apos;</span>).anyOf({
+    <span class="hljs-attr">largerThan</span>: <span class="hljs-number">5</span>,
+    <span class="hljs-attr">smallerThan</span>: <span class="hljs-number">2</span>
+}).anyOf({
+    <span class="hljs-attr">smallerThan</span>: <span class="hljs-number">150</span>
+}); <span class="pl-c">// true</span>
+</code></pre>
+<pre><code class="lang-js">enforce(<span class="pl-s">&apos;Toto, I\&apos;ve a feeling we\&apos;re not in Kansas anymore&apos;</span>).anyOf({
+    <span class="hljs-attr">largerThan</span>: <span class="hljs-number">5</span>,
+    <span class="hljs-attr">smallerThan</span>: <span class="hljs-number">2</span>
+}).smallerThan(<span class="hljs-number">150</span>);
+</code></pre>
+<p>Enforce exposes all <a href="rules/index.html">predefined</a> and <a href="rules/custom.html">custom</a> rules, and the <a href="compound/index.html">compound enforcement methods</a>. You may use chaining to make multiple enfocements for the same value.</p>
+<h3 id="table-of-contents">Table of Contents</h3>
+<ul>
+<li><a href="rules/index.html">Enforce Rules</a></li>
+<li><a href="rules/custom.html">Custom Enforce Rules</a></li>
+</ul>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="../validate/index.html"><span class="title">The validate Function</span></a></div>
+          <div class="right"><a href="../enforce/rules/index.html"><span class="label">Next: </span><span class="title">Enforce Rules</span></a></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

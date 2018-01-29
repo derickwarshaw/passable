@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/style.css?t=615badd5">
+    <link rel="stylesheet" href="https://unpkg.com/highlight.js@9.12.0/styles/atom-one-light.css">
+    <link rel="stylesheet" href="../assets/style/main.css?t=929bb307">
+    <script src="../assets/script.js?t=42463e55"></script>
+    <title>The result object - PASSABLE 5.10.1</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1 -parent"><a class="link title  link-index" href="../index.html">PASSABLE 5.10.1</a>
+              <ul class="submenu">
+                <li class="menu-item -level-2 -parent"><span class="title">Getting Started</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-getting_startedinstallation" href="../getting_started/installation.html">Installation</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-getting_startedwriting_tests" href="../getting_started/writing_tests.html">Writing tests</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title -active link-getting_startedresult" href="../getting_started/result.html">The result object</a>
+                      <ul class="headings heading-list">
+                        <li class="heading-item -depth-2"><a class="hlink link-properties" href="#properties">Properties</a>
+                          <ul class="heading-list -depth-2">
+                            <li class="heading-item -depth-3"><a class="hlink link-testsperformed-field-structure" href="#testsperformed-field-structure">`testsPerformed` field structure</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-geterrors-and-getwarnings-functions" href="#geterrors-and-getwarnings-functions">`getErrors` and `getWarnings` functions</a>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-why-no-isvalid-prop" href="#why-no-isvalid-prop">Why No `isValid` prop?</a>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-passing-example" href="#passing-example">Passing Example</a>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-failing-example" href="#failing-example">Failing Example</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-getting_startedparams" href="../getting_started/params.html">Passable Parameters</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2 -parent"><a class="link title  link-pass" href="../pass/index.html">The pass Function</a>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-passhow_to_fail" href="../pass/how_to_fail.html">How to fail a pass</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-passwarn_only_passes" href="../pass/warn_only_passes.html">Warn only passes</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-passspecific" href="../pass/specific.html">Running a specific pass</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-validate" href="../validate/index.html">The validate Function</a>
+                </li>
+                <li class="menu-item -level-2 -parent"><a class="link title  link-enforce" href="../enforce/index.html">The enforce Function</a>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3 -parent"><a class="link title  link-enforcerules" href="../enforce/rules/index.html">Enforce Rules</a>
+                      <ul class="submenu">
+                        <li class="menu-item -level-4"><a class="link title  link-enforcerulescontentmatches" href="../enforce/rules/content/matches/index.html">content/matches</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforcerulescontentinside" href="../enforce/rules/content/inside/index.html">content/inside</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforceruleslangis_array" href="../enforce/rules/lang/is_array/index.html">lang/isArray</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforceruleslangis_string" href="../enforce/rules/lang/is_string/index.html">lang/isString</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforceruleslangis_number" href="../enforce/rules/lang/is_number/index.html">lang/isNumber</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforcerulessizeis_empty" href="../enforce/rules/size/is_empty/index.html">size/isEmpty</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforcerulessizelarger_than" href="../enforce/rules/size/larger_than/index.html">size/largerThan</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforcerulessizelarger_than_or_equals" href="../enforce/rules/size/larger_than_or_equals/index.html">size/largerThanOrEquals</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforcerulessizesize_equals" href="../enforce/rules/size/size_equals/index.html">size/sizeEquals</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforcerulessizesmaller_than" href="../enforce/rules/size/smaller_than/index.html">size/smallerThan</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforcerulessizesmaller_than_or_equals" href="../enforce/rules/size/smaller_than_or_equals/index.html">size/smallerThanOrEquals</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-enforcerulescustom" href="../enforce/rules/custom.html">Custom Enforce Rules</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-enforcecompound" href="../enforce/compound/index.html">Compound Enforcements</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-compatabilityassertions" href="../compatability/assertions.html">Using with assertions libraries</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+      <div class="body page-getting_startedresult">
+        <div class="header-nav">
+          <div class="right"><a class="iconlink" href="https://github.com/fiverr/passable" data-title="fiverr/passable">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h1 id="the-result-object">The result object</h1>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td><code>String</code></td>
+<td>The name of the form being validated</td>
+</tr>
+<tr>
+<td><code>hasValidationErrors</code></td>
+<td><code>Boolean</code></td>
+<td>Whether there are validation errors or not</td>
+</tr>
+<tr>
+<td><code>hasValidationWarnings</code></td>
+<td><code>Boolean</code></td>
+<td>Whether there are validation warnings or not</td>
+</tr>
+<tr>
+<td><code>failCount</code></td>
+<td><code>Number</code></td>
+<td>Overall errors count for this form</td>
+</tr>
+<tr>
+<td><code>warnCount</code></td>
+<td><code>Number</code></td>
+<td>Overall warnings count for this form</td>
+</tr>
+<tr>
+<td><code>testCount</code></td>
+<td><code>Number</code></td>
+<td>Overall test count in this form</td>
+</tr>
+<tr>
+<td><code>testsPerformed</code></td>
+<td><code>Object{}</code></td>
+<td>Detailed stats per field (structure detailed below)</td>
+</tr>
+<tr>
+<td><code>validationErrors</code></td>
+<td><code>Object[]</code></td>
+<td>Actual errors per each field</td>
+</tr>
+<tr>
+<td><code>validationErrors[field-name]</code></td>
+<td><code>Object[]</code></td>
+<td>All error strings for this field</td>
+</tr>
+<tr>
+<td><code>validationWarnings</code></td>
+<td><code>Object[]</code></td>
+<td>Actual errors per each field</td>
+</tr>
+<tr>
+<td><code>validationWarnings[field-name]</code></td>
+<td><code>Object[]</code></td>
+<td>All warning strings for this field</td>
+</tr>
+<tr>
+<td><code>skipped</code></td>
+<td><code>Array</code></td>
+<td>All skipped fields (empty, unless the <code>specific</code> option is used)</td>
+</tr>
+<tr>
+<td><code>getErrors</code></td>
+<td><code>Function</code></td>
+<td>Getter function which allows accessing the errors array of one or all fields</td>
+</tr>
+<tr>
+<td><code>getWarnings</code></td>
+<td><code>Function</code></td>
+<td>Getter function which allows accessing the warnings array of one or all fields</td>
+</tr>
+</tbody>
+</table>
+<h3 id="testsperformed-field-structure"><code>testsPerformed</code> field structure</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>failCount</code></td>
+<td><code>Number</code></td>
+<td>Overall errors count for this field</td>
+</tr>
+<tr>
+<td><code>warnCount</code></td>
+<td><code>Number</code></td>
+<td>Overall warnings count for this field</td>
+</tr>
+<tr>
+<td><code>testCount</code></td>
+<td><code>Number</code></td>
+<td>Overall test count in this field</td>
+</tr>
+</tbody>
+</table>
+<h2 id="geterrors-and-getwarnings-functions"><code>getErrors</code> and <code>getWarnings</code> functions</h2>
+<blockquote>
+<p>since 5.10.0
+You can easily traverse the object tree to acess the field errors and warnings, but when accessing many fields, it can get pretty messy:</p>
+</blockquote>
+<pre><code class="lang-js">resultObject.validationErrors.myField &amp;&amp; resultObject.validationErrors.myField[<span class="hljs-number">0</span>];
+</code></pre>
+<p>This is clearly not ideal. There is a shortcut to getting to a specific field:</p>
+<pre><code class="lang-js">resultObject.getErrors(<span class="pl-s">&apos;fieldName&apos;</span>);
+<span class="pl-c">// [&apos;Error string 1&apos;, `Error string 2`]</span>
+
+resultObject.getWarnings(<span class="pl-s">&apos;fieldName&apos;</span>);
+<span class="pl-c">// [&apos;Warning string 1&apos;, `Warning string 2`]</span>
+</code></pre>
+<p>If there are no errors for the field, the function returns an empty array:</p>
+<pre><code class="lang-js">resultObject.getErrors(<span class="pl-s">&apos;fieldName&apos;</span>);
+<span class="pl-c">// []</span>
+
+resultObject.getWarnings(<span class="pl-s">&apos;fieldName&apos;</span>);
+<span class="pl-c">// []</span>
+</code></pre>
+<h2 id="why-no-isvalid-prop">Why No <code>isValid</code> prop?</h2>
+<p>There is <strong>no</strong> <code>isValid</code> prop, this is by design. Passable cannot know your business logic, nor can it ever assume that <code>0</code> errors means valid result. <code>0</code> errors can be due to skipped fields. Same goes for isInvalid. Even though, usually, errors mean invalidity, it is not always the case. This is why Passable gives you all the information about the tests, but it is your job to decide whether it means that the validation failed or not.</p>
+<h2 id="passing-example">Passing Example</h2>
+<pre><code class="lang-js">{
+  <span class="pl-s">&quot;name&quot;</span>: <span class="pl-s">&quot;NewUserForm&quot;</span>,
+  <span class="pl-s">&quot;hasValidationErrors&quot;</span>: <span class="pl-c1">false</span>,
+  <span class="pl-s">&quot;hasValidationWarnings&quot;</span>: <span class="pl-c1">false</span>,
+  <span class="pl-s">&quot;failCount&quot;</span>: <span class="hljs-number">0</span>,
+  <span class="pl-s">&quot;warnCount&quot;</span>: <span class="hljs-number">0</span>,
+  <span class="pl-s">&quot;testCount&quot;</span>: <span class="hljs-number">2</span>,
+  <span class="pl-s">&quot;testsPerformed&quot;</span>: {
+    <span class="pl-s">&quot;username&quot;</span>: {
+      <span class="pl-s">&quot;testCount&quot;</span>: <span class="hljs-number">1</span>,
+      <span class="pl-s">&quot;failCount&quot;</span>: <span class="hljs-number">0</span>,
+      <span class="pl-s">&quot;warnCount&quot;</span>: <span class="hljs-number">0</span>
+    },
+    <span class="pl-s">&quot;age&quot;</span>: {
+      <span class="pl-s">&quot;testCount&quot;</span>: <span class="hljs-number">1</span>,
+      <span class="pl-s">&quot;failCount&quot;</span>: <span class="hljs-number">0</span>,
+      <span class="pl-s">&quot;warnCount&quot;</span>: <span class="hljs-number">0</span>
+    }
+  },
+  <span class="pl-s">&quot;validationErrors&quot;</span>: {},
+  <span class="pl-s">&quot;validationWarnings&quot;</span>: {},
+  <span class="pl-s">&quot;skipped&quot;</span>: []
+}
+</code></pre>
+<h2 id="failing-example">Failing Example</h2>
+<pre><code class="lang-js">{
+  <span class="pl-s">&quot;name&quot;</span>: <span class="pl-s">&quot;NewUserForm&quot;</span>,
+  <span class="pl-s">&quot;hasValidationErrors&quot;</span>: <span class="pl-c1">true</span>,
+  <span class="pl-s">&quot;hasValidationWarnings&quot;</span>: <span class="pl-c1">false</span>,
+  <span class="pl-s">&quot;failCount&quot;</span>: <span class="hljs-number">2</span>,
+  <span class="pl-s">&quot;warnCount&quot;</span>: <span class="hljs-number">0</span>,
+  <span class="pl-s">&quot;testCount&quot;</span>: <span class="hljs-number">2</span>,
+  <span class="pl-s">&quot;testsPerformed&quot;</span>: {
+    <span class="pl-s">&quot;username&quot;</span>: {
+      <span class="pl-s">&quot;testCount&quot;</span>: <span class="hljs-number">1</span>,
+      <span class="pl-s">&quot;failCount&quot;</span>: <span class="hljs-number">1</span>,
+      <span class="pl-s">&quot;warnCount&quot;</span>: <span class="hljs-number">0</span>
+    },
+    <span class="pl-s">&quot;age&quot;</span>: {
+      <span class="pl-s">&quot;testCount&quot;</span>: <span class="hljs-number">1</span>,
+      <span class="pl-s">&quot;failCount&quot;</span>: <span class="hljs-number">1</span>,
+      <span class="pl-s">&quot;warnCount&quot;</span>: <span class="hljs-number">0</span>
+    }
+  },
+  <span class="pl-s">&quot;validationErrors&quot;</span>: {
+    <span class="pl-s">&quot;username&quot;</span>: [
+      <span class="pl-s">&quot;Must be a string between 2 and 10 chars&quot;</span>
+    ],
+    <span class="pl-s">&quot;age&quot;</span>: [
+      <span class="pl-s">&quot;Can either be empty, or larger than 18&quot;</span>
+    ]
+  },
+  <span class="pl-s">&quot;validationWarnings&quot;</span>: {},
+  <span class="pl-s">&quot;skipped&quot;</span>: []
+}
+</code></pre>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="../getting_started/writing_tests.html"><span class="title">Writing tests</span></a></div>
+          <div class="right"><a href="../getting_started/params.html"><span class="label">Next: </span><span class="title">Passable Parameters</span></a></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

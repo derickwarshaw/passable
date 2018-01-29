@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/style.css?t=615badd5">
+    <link rel="stylesheet" href="https://unpkg.com/highlight.js@9.12.0/styles/atom-one-light.css">
+    <link rel="stylesheet" href="../assets/style/main.css?t=929bb307">
+    <script src="../assets/script.js?t=42463e55"></script>
+    <title>The validate Function - PASSABLE 5.10.1</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1 -parent"><a class="link title  link-index" href="../index.html">PASSABLE 5.10.1</a>
+              <ul class="submenu">
+                <li class="menu-item -level-2 -parent"><span class="title">Getting Started</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-getting_startedinstallation" href="../getting_started/installation.html">Installation</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-getting_startedwriting_tests" href="../getting_started/writing_tests.html">Writing tests</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-getting_startedresult" href="../getting_started/result.html">The result object</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-getting_startedparams" href="../getting_started/params.html">Passable Parameters</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2 -parent"><a class="link title  link-pass" href="../pass/index.html">The pass Function</a>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-passhow_to_fail" href="../pass/how_to_fail.html">How to fail a pass</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-passwarn_only_passes" href="../pass/warn_only_passes.html">Warn only passes</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-passspecific" href="../pass/specific.html">Running a specific pass</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2"><a class="link title -active link-validate" href="../validate/index.html">The validate Function</a>
+                  <ul class="headings heading-list">
+                    <li class="heading-item -depth-2"><a class="hlink link-usage" href="#usage">Usage</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-the-response-object" href="#the-response-object">The response object</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2 -parent"><a class="link title  link-enforce" href="../enforce/index.html">The enforce Function</a>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3 -parent"><a class="link title  link-enforcerules" href="../enforce/rules/index.html">Enforce Rules</a>
+                      <ul class="submenu">
+                        <li class="menu-item -level-4"><a class="link title  link-enforcerulescontentmatches" href="../enforce/rules/content/matches/index.html">content/matches</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforcerulescontentinside" href="../enforce/rules/content/inside/index.html">content/inside</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforceruleslangis_array" href="../enforce/rules/lang/is_array/index.html">lang/isArray</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforceruleslangis_string" href="../enforce/rules/lang/is_string/index.html">lang/isString</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforceruleslangis_number" href="../enforce/rules/lang/is_number/index.html">lang/isNumber</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforcerulessizeis_empty" href="../enforce/rules/size/is_empty/index.html">size/isEmpty</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforcerulessizelarger_than" href="../enforce/rules/size/larger_than/index.html">size/largerThan</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforcerulessizelarger_than_or_equals" href="../enforce/rules/size/larger_than_or_equals/index.html">size/largerThanOrEquals</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforcerulessizesize_equals" href="../enforce/rules/size/size_equals/index.html">size/sizeEquals</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforcerulessizesmaller_than" href="../enforce/rules/size/smaller_than/index.html">size/smallerThan</a>
+                        </li>
+                        <li class="menu-item -level-4"><a class="link title  link-enforcerulessizesmaller_than_or_equals" href="../enforce/rules/size/smaller_than_or_equals/index.html">size/smallerThanOrEquals</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-enforcerulescustom" href="../enforce/rules/custom.html">Custom Enforce Rules</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-enforcecompound" href="../enforce/compound/index.html">Compound Enforcements</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-compatabilityassertions" href="../compatability/assertions.html">Using with assertions libraries</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+      <div class="body page-validate">
+        <div class="header-nav">
+          <div class="right"><a class="iconlink" href="https://github.com/fiverr/passable" data-title="fiverr/passable">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h1 id="lean-tests-with-the-validate-function">Lean tests with the <code>validate</code> function</h1>
+<blockquote>
+<p>Since 5.10.0</p>
+</blockquote>
+<p>Along with the more verbose <code>Passable()</code> validation, passable supports a leaner syntax, aimed to bring Passable into less complex forms, where only one field is being validated, or that only a few rules are needed.</p>
+<h2 id="usage">Usage</h2>
+<p>The <code>validate</code> function accepts two arguments:</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required?</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>message</code></td>
+<td><code>string</code></td>
+<td>No</td>
+<td>The error to display on failure</td>
+</tr>
+<tr>
+<td><code>test</code></td>
+<td><code>function</code></td>
+<td>Yes</td>
+<td>The test function to run</td>
+</tr>
+</tbody>
+</table>
+<p>Just like the <a href="../pass/index.html">pass</a> function, <code>validate</code> will fail your tests on <a href="../pass/how_to_fail.html">three situations</a>:</p>
+<ul>
+<li>When your enforce statement fails.</li>
+<li>When your code throws an Error.</li>
+<li>When you return <code>false</code> in your test function.</li>
+</ul>
+<p>If function passed, or if the function returns anything other than <code>false</code>, the test will implicitly pass.</p>
+<ul>
+<li>With <a href="../enforce/index.html">enforce</a></li>
+</ul>
+<pre><code class="lang-js">
+<span class="pl-k">import</span> {validate, enforce} <span class="pl-k">from</span> <span class="pl-s">&apos;passable&apos;</span>;
+
+<span class="pl-c">// name = &apos;Eve&apos;</span>
+<span class="pl-k">const</span> validity = validate(<span class="pl-s">&apos;Must be at least 5 chars&apos;</span>, () =&gt; {
+    enforce(name).largerThanOrEquals(<span class="hljs-number">5</span>);
+});
+
+<span class="pl-c">// validity = {</span>
+<span class="pl-c">//     valid: false,</span>
+<span class="pl-c">//     message: &apos;Must be at least 5 chars&apos;</span>
+<span class="pl-c">// }</span>
+
+--
+
+<span class="pl-c">// without a message:</span>
+<span class="pl-k">const</span> validity = validate(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    enforce(name).largerThanOrEquals(<span class="hljs-number">5</span>);
+});
+
+<span class="pl-c">// validity = {</span>
+<span class="pl-c">//     valid: false</span>
+<span class="pl-c">// }</span>
+</code></pre>
+<ul>
+<li>With custom logic only</li>
+</ul>
+<pre><code class="lang-js"><span class="pl-k">import</span> {validate} <span class="pl-k">from</span> <span class="pl-s">&apos;passable&apos;</span>;
+
+<span class="pl-c">// name = Danielle</span>
+<span class="pl-k">const</span> validity = validate(<span class="pl-s">&apos;Must be at least 5 chars&apos;</span>, () =&gt; {
+    <span class="pl-k">return</span> name &gt;= <span class="hljs-number">5</span>;
+});
+
+<span class="pl-c">// validity = {</span>
+<span class="pl-c">//     valid: true</span>
+<span class="pl-c">// }</span>
+</code></pre>
+<h2 id="the-response-object">The response object</h2>
+<p><code>validate</code>&apos;s response object can have two properties:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>valid</code></td>
+<td><code>boolean</code></td>
+<td>Whether the validation passed successfully or not</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td><code>string</code></td>
+<td>Displays the error message specified by the consumer when the validation fails. Omitted on success.</td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="../pass/specific.html"><span class="title">Running a specific pass</span></a></div>
+          <div class="right"><a href="../enforce/index.html"><span class="label">Next: </span><span class="title">The enforce Function</span></a></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
