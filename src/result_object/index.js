@@ -6,7 +6,7 @@ declare type ErrorAndWarningObject = {
 };
 
 const WARN: string = 'warn';
-declare type CountName = 'failCount' | 'warnCount';
+declare type CountName = 'errorCount' | 'warnCount';
 declare type ObjectName = 'validationErrors' | 'validationWarnings';
 declare type ValidationName = 'hasValidationErrors' | 'hasValidationWarnings';
 
@@ -21,7 +21,7 @@ class ResultObject {
         this.name = name;
         this.hasValidationErrors = false;
         this.hasValidationWarnings = false;
-        this.failCount = 0;
+        this.errorCount = 0;
         this.warnCount = 0;
         this.testCount = 0;
         this.testsPerformed = {};
@@ -41,7 +41,7 @@ class ResultObject {
 
         this.testsPerformed[fieldName] = {
             testCount: 0,
-            failCount: 0,
+            errorCount: 0,
             warnCount: 0
         };
 
@@ -121,7 +121,7 @@ class ResultObject {
     name: string;
     hasValidationErrors: boolean;
     hasValidationWarnings: boolean;
-    failCount: number;
+    errorCount: number;
     warnCount: number;
     testCount: number;
     validationErrors: ErrorAndWarningObject;
@@ -129,7 +129,7 @@ class ResultObject {
     testsPerformed: {
         [name: string]: {
             testCount: number,
-            failCount: number,
+            errorCount: number,
             warnCount: number
         }
     };

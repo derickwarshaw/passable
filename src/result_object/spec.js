@@ -9,7 +9,7 @@ describe('Test PassableResponse class', () => {
             name: 'FormName',
             hasValidationErrors: false,
             hasValidationWarnings: false,
-            failCount: 0,
+            errorCount: 0,
             warnCount: 0,
             testCount: 0,
             testsPerformed: {},
@@ -26,7 +26,7 @@ describe('Test PassableResponse class', () => {
 
             expect(testObject.testsPerformed).to.deep.equal({
                 example: {
-                    failCount: 0,
+                    errorCount: 0,
                     testCount: 0,
                     warnCount: 0
                 }
@@ -35,13 +35,13 @@ describe('Test PassableResponse class', () => {
 
         it('Should keep field counters untouched if they already exist', () => {
             Object.assign(testObject.testsPerformed.example, {
-                failCount: 5,
+                errorCount: 5,
                 testCount: 5
             });
 
             expect(testObject.testsPerformed).to.deep.equal({
                 example: {
-                    failCount: 5,
+                    errorCount: 5,
                     testCount: 5,
                     warnCount: 0
                 }
@@ -57,7 +57,7 @@ describe('Test PassableResponse class', () => {
             testObject.bumpTestCounter('example');
             expect(testObject.testsPerformed).to.deep.equal({
                 example: {
-                    failCount: 0,
+                    errorCount: 0,
                     testCount: 1,
                     warnCount: 0
                 }
@@ -102,7 +102,7 @@ describe('Test PassableResponse class', () => {
             testObject = new ResultObject('FormName')
                 .initFieldCounters('example')
                 .initFieldCounters('example_2')
-                .fail('example', 'Error string', 'fail');
+                .fail('example', 'Error string', 'error');
         });
 
         it('Should return errors array for a field with errors', () => {

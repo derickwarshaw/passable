@@ -3,17 +3,17 @@
 import passable from '../index.js';
 import { expect } from 'chai';
 
-const oneValidationError = passable('oneValidationError', null, (pass, enforce) => {
+const oneValidationError = passable('oneValidationError', null, (pass, warn, enforce) => {
     pass('IsFalse', 'Should Fail', () => false);
     pass('IsTrue', 'Should Pass', () => true);
 });
 
-const noValidationErrors = passable('noValidationErrors', null, (pass, enforce) => {
+const noValidationErrors = passable('noValidationErrors', null, (pass, warn, enforce) => {
     pass('IsTrue', 'Should Pass', () => true);
     pass('IsTrue', 'ShouldPass', () => true);
 });
 
-const failSecondTest = passable('failSecondTest', null, (pass, enforce) => {
+const failSecondTest = passable('failSecondTest', null, (pass, warn, enforce) => {
     pass('FirstTest', 'Should Pass ', () => true);
     pass('SecondTest', 'Should Fail', () => false);
     pass('ThirdTest', 'Should Pass', () => true);
@@ -31,7 +31,7 @@ describe('Test passable\'s api ', () => {
     });
 
     it('Should have one validation error', () => {
-        expect(oneValidationError.failCount).to.equal(1);
+        expect(oneValidationError.errorCount).to.equal(1);
     });
 
     it('Should perform two tests', () => {
@@ -39,7 +39,7 @@ describe('Test passable\'s api ', () => {
     });
 
     it('Should pass with no validation errors', () => {
-        expect(noValidationErrors.failCount).to.equal(0);
+        expect(noValidationErrors.errorCount).to.equal(0);
     });
 
     it('Should perform two tests', () => {

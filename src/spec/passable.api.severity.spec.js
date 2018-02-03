@@ -3,7 +3,7 @@
 import passable from '../index.js';
 import { expect } from 'chai';
 
-describe('Test warn flag', () => {
+describe('Test warn function', () => {
     it('Should warn and not fail', () => {
         expect(warnPass).to.deep.equal(warnPassExpected);
     });
@@ -19,15 +19,15 @@ describe('Test warn flag', () => {
 
 // Actual test data
 
-const warnPass = passable('WarnPass', null, (pass, enforce) => {
-        pass('WarnPass', 'should warn', 'warn', () => false);
+const warnPass = passable('WarnPass', null, (pass, warn, enforce) => {
+        warn('WarnPass', 'should warn', () => false);
     }),
-    warnFail = passable('WarnFail', null, (pass, enforce) => {
-        pass('Warn', 'should warn', 'warn', () => false);
+    warnFail = passable('WarnFail', null, (pass, warn, enforce) => {
+        warn('Warn', 'should warn', () => false);
         pass('Fail', 'should Fail', () => false);
     }),
-    fail = passable('Fail', null, (pass, enforce) => {
-        pass('Warn', 'should not warn', 'warn', () => true);
+    fail = passable('Fail', null, (pass, warn, enforce) => {
+        warn('Warn', 'should not warn', () => true);
         pass('Fail', 'should Fail', () => false);
     });
 
@@ -37,11 +37,11 @@ const warnPassExpected = {
         hasValidationErrors: false,
         hasValidationWarnings: true,
         testsPerformed: {
-            WarnPass: { testCount: 1, failCount: 0, warnCount: 1 }
+            WarnPass: { testCount: 1, errorCount: 0, warnCount: 1 }
         },
         validationErrors: {},
         validationWarnings: { WarnPass: ['should warn'] },
-        failCount: 0,
+        errorCount: 0,
         warnCount: 1,
         testCount: 1
     },
@@ -51,12 +51,12 @@ const warnPassExpected = {
         hasValidationErrors: true,
         hasValidationWarnings: true,
         testsPerformed: {
-            Warn: { testCount: 1, failCount: 0, warnCount: 1 },
-            Fail: { testCount: 1, failCount: 1, warnCount: 0 }
+            Warn: { testCount: 1, errorCount: 0, warnCount: 1 },
+            Fail: { testCount: 1, errorCount: 1, warnCount: 0 }
         },
         validationErrors: { Fail: ['should Fail'] },
         validationWarnings: { Warn: ['should warn'] },
-        failCount: 1,
+        errorCount: 1,
         warnCount: 1,
         testCount: 2
     },
@@ -66,12 +66,12 @@ const warnPassExpected = {
         hasValidationErrors: true,
         hasValidationWarnings: false,
         testsPerformed: {
-            Warn: { testCount: 1, failCount: 0, warnCount: 0 },
-            Fail: { testCount: 1, failCount: 1, warnCount: 0 }
+            Warn: { testCount: 1, errorCount: 0, warnCount: 0 },
+            Fail: { testCount: 1, errorCount: 1, warnCount: 0 }
         },
         validationErrors: { Fail: ['should Fail'] },
         validationWarnings: {},
-        failCount: 1,
+        errorCount: 1,
         warnCount: 0,
         testCount: 2
     };

@@ -12,24 +12,24 @@ describe('Test fail function', () => {
         testObject = new ResultObject('FormName');
         testObject.testsPerformed = {
             f1: {
-                failCount: 0,
+                errorCount: 0,
                 warnCount: 0
             }
         };
     });
 
     it('Should return correct failing object', () => {
-        const fail = testObject.fail('f1', 'should fail', 'fail');
+        const fail = testObject.fail('f1', 'should fail', 'error');
 
         expect(fail).to.deep.equal({
             name: 'FormName',
             testCount: 0,
-            failCount: 1,
+            errorCount: 1,
             warnCount: 0,
             hasValidationErrors: true,
             hasValidationWarnings: false,
             testsPerformed: {
-                f1: { failCount: 1, warnCount: 0 }
+                f1: { errorCount: 1, warnCount: 0 }
             },
             validationErrors: { f1: ['should fail'] },
             validationWarnings: {},
@@ -42,12 +42,12 @@ describe('Test fail function', () => {
         expect(warn).to.deep.equal({
             name: 'FormName',
             testCount: 0,
-            failCount: 0,
+            errorCount: 0,
             warnCount: 1,
             hasValidationErrors: false,
             hasValidationWarnings: true,
             testsPerformed: {
-                f1: { failCount: 0, warnCount: 1 }
+                f1: { errorCount: 0, warnCount: 1 }
             },
             validationErrors: {},
             validationWarnings: { f1: ['should warn'] },

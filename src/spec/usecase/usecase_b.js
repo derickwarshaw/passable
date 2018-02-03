@@ -1,6 +1,6 @@
 export default (passable) => {
 
-    const response = passable('case_b', ['field_1', 'field_4'], (pass, enforce) => {
+    const response = passable('case_b', ['field_1', 'field_4'], (pass, warn, enforce) => {
         pass('field_1', 'should be a string of 5 chars', () => {
             enforce('hello').allOf({
                 sizeEquals: 5,
@@ -21,7 +21,7 @@ export default (passable) => {
             });
         });
 
-        pass('field_4', 'should be either "a" or "b"', 'warn', () => {
+        warn('field_4', 'should be either "a" or "b"', () => {
             enforce('c').allOf({
                 inside: ['a', 'b']
             });
@@ -47,18 +47,18 @@ export default (passable) => {
         name: 'case_b',
         hasValidationErrors: false,
         hasValidationWarnings: true,
-        failCount: 0,
+        errorCount: 0,
         warnCount: 1,
         testCount: 2,
         testsPerformed: {
             field_1: {
                 testCount: 1,
-                failCount: 0,
+                errorCount: 0,
                 warnCount: 0
             },
             field_4: {
                 testCount: 1,
-                failCount: 0,
+                errorCount: 0,
                 warnCount: 1
             }
         },

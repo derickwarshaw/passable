@@ -8,7 +8,7 @@ function passRunner(callback: Function): boolean {
     }
 
     try {
-        const res: PassRunnerCallback = callback();
+        const res: PassRunnerCallback = callback.call(this);
 
         if (typeof res !== 'undefined' && res !== null && res.hasOwnProperty('valid')) {
             isValid = res.valid;

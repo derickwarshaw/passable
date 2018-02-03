@@ -28,23 +28,23 @@ export default (passable, enforce) => {
         name: 'case_d',
         hasValidationErrors: true,
         hasValidationWarnings: false,
-        failCount: 1,
+        errorCount: 1,
         warnCount: 0,
         testCount: 3,
         testsPerformed: {
             field_1: {
                 testCount: 1,
-                failCount: 0,
+                errorCount: 0,
                 warnCount: 0
             },
             field_2: {
                 testCount: 1,
-                failCount: 1,
+                errorCount: 1,
                 warnCount: 0
             },
             field_3: {
                 testCount: 1,
-                failCount: 0,
+                errorCount: 0,
                 warnCount: 0
             }
         },

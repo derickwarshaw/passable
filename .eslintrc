@@ -112,7 +112,6 @@
         "no-useless-rename": 2,
         "no-var": 2,
         "object-shorthand": ["error", "properties"],
-        "prefer-arrow-callback": 2,
         "prefer-const": ["error", {
             "destructuring": "all",
             "ignoreReadBeforeAssign": false

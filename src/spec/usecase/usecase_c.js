@@ -6,7 +6,7 @@ export default (passable) => {
             * Chained custom rules
     */
 
-    const response = passable('case_c', null, (pass, enforce) => {
+    const response = passable('case_c', null, (pass, warn, enforce) => {
         pass('field_1', 'should be a string of 5 chars', () => {
             enforce('hello').allOf({
                 sizeEquals: 5,
@@ -51,33 +51,33 @@ export default (passable) => {
         name: 'case_c',
         hasValidationErrors: true,
         hasValidationWarnings: false,
-        failCount: 3,
+        errorCount: 3,
         warnCount: 0,
         testCount: 6,
         testsPerformed: {
             field_1: {
                 testCount: 1,
-                failCount: 0,
+                errorCount: 0,
                 warnCount: 0
             },
             field_2: {
                 testCount: 1,
-                failCount: 1,
+                errorCount: 1,
                 warnCount: 0
             },
             field_3: {
                 testCount: 1,
-                failCount: 1,
+                errorCount: 1,
                 warnCount: 0
             },
             field_4: {
                 testCount: 1,
-                failCount: 0,
+                errorCount: 0,
                 warnCount: 0
             },
             field_5: {
                 testCount: 2,
-                failCount: 1,
+                errorCount: 1,
                 warnCount: 0
             }
         },

@@ -2,16 +2,16 @@
 import PassableResponse from '../../index';
 
 const WARN: string = 'warn';
-type CountName = 'failCount' | 'warnCount';
+type CountName = 'errorCount' | 'warnCount';
 type ObjectName = 'validationErrors' | 'validationWarnings';
 type ValidationName = 'hasValidationErrors' | 'hasValidationWarnings';
 
 function fail(fieldName: string, statement: string, severity: Severity): PassableResponse {
-    const isFail: boolean = (severity !== WARN);
+    const isError: boolean = (severity !== WARN);
 
-    const countName: CountName = isFail? 'failCount' : 'warnCount',
-        objectName: objectName = isFail? 'validationErrors' : 'validationWarnings',
-        validationName: ValidationName = isFail? 'hasValidationErrors' : 'hasValidationWarnings';
+    const countName: CountName = isError? 'errorCount' : 'warnCount',
+        objectName: objectName = isError? 'validationErrors' : 'validationWarnings',
+        validationName: ValidationName = isError? 'hasValidationErrors' : 'hasValidationWarnings';
 
     this[validationName] = true;
     this[objectName][fieldName] = this[objectName][fieldName] || [];

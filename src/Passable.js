@@ -6,14 +6,14 @@ import ResultObject from './result_object';
 import { passableArgs, root, runtimeError, buildSpecificObject } from 'Helpers';
 import { Errors } from 'Constants';
 
-const FAIL: Severity = 'fail';
+const WARN: Severity = 'warn';
+const ERROR: Severity = 'error';
 
 class Passable {
 
     specific: SpecificObject;
     custom: Rules;
     res: ResultObject;
-    pass: Function;
 
     constructor(name: string, specific: Specific, passes: Passes, custom?: Rules) {
         if (typeof name !== 'string') {
@@ -25,14 +25,25 @@ class Passable {
         this.specific = computedArgs.specific;
         this.custom = Object.assign({}, globalRules, computedArgs.custom);
         this.res = new ResultObject(name);
-        this.pass = this.pass.bind(this);
 
-        computedArgs.passes(this.pass, (value) => enforce(value, this.custom));
+        computedArgs.passes(
+            this.pass,
+            this.warn,
+            (value: AnyValue) => enforce(value, this.custom)
+        );
 
         return this.res;
     }
 
-    pass(fieldName: string, statement: string, ...args: [Severity, Pass]) {
+    warn = (fieldName: string, statement: string, fn: Pass): BoolNull => (
+        this.test(fieldName, statement, WARN, fn)
+    )
+
+    pass = (fieldName: string, statement: string, fn: Pass): BoolNull => (
+        this.test(fieldName, statement, ERROR, fn)
+    )
+
+    test = (fieldName: string, statement: string, severity: Severity, fn: Pass): BoolNull => {
         const { only, not }: { [filter: string]: Set<string>} = this.specific;
         const notInOnly: boolean = only.size > 0 && !only.has(fieldName);
 
@@ -43,21 +54,14 @@ class Passable {
 
         this.res.initFieldCounters(fieldName);
 
-        const lastIndex: number = args.length - 1;
-        let callback: Function;
-
-        if (typeof args[lastIndex] === 'function') {
-            callback = args[lastIndex];
-        } else {
+        if (typeof fn !== 'function') {
             return true;
         }
 
-        const isValid: boolean = passRunner(callback);
+        const isValid: boolean = passRunner.call(this, fn);
 
         if (!isValid) {
-            const severity: Severity = lastIndex !== 0 ? args[0] : FAIL;
-
-            // on failure/error, bump up the counters
+            // on warning/error, bump up the counters
             this.res.fail(fieldName, statement, severity);
         }
 

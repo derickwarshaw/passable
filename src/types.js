@@ -15,7 +15,7 @@ declare type ArrayOrStringOfArrays = Array<string> | string;
 declare type Specific = Array<string> | string | {
     only?: ArrayOrStringOfArrays,
     not?: ArrayOrStringOfArrays
-};
+} | null;
 
 declare type PassRunnerCallback = {
     valid: boolean
@@ -31,11 +31,13 @@ declare type EnforceSelf = {
     valid?: boolean
 };
 
-declare type Severity = 'warn' | 'fail';
-
+declare type Severity = 'warn' | 'error';
+declare type BoolNull = boolean | null;
 declare type Pass = () => void;
 declare type Enforce = (AnyValue, Rules) => EnforceSelf;
-declare type Passes = (pass: Pass, enforce: Enforce) => void;
+
+declare type TestFunction = (fieldName: string, statement: string, fn: Function) => BoolNull;
+declare type Passes = (pass: TestFunction, warn: TestFunction, enforce: Enforce) => void;
 
 declare type PassableRuntime = {
     specific: SpecificObject,
