@@ -1,6 +1,6 @@
 'use strict';
 
-import passable from '../index.js';
+import passable, { Enforce } from '../index.js';
 import { expect } from 'chai';
 
 describe('Test rule extensions', () => {
@@ -13,12 +13,17 @@ describe('Test rule extensions', () => {
     });
 });
 
-const noSnuffles = passable('ExtendTests', null, (pass, enforce) => {
+const noSnuffles = passable('ExtendTests', null, (pass) => {
+
+    const enforce = new Enforce({
+        no_slave_name: (v) => v.indexOf('Snuffles') === -1
+    });
+
     pass('NoSnuffles', 'should pass', () => (
 
         enforce('The name is Snowball').allOf({
             no_slave_name: {}
-        }).fin()
+        })
     ));
 
     pass('NoSnuffles', 'should Fail', () => {
@@ -26,13 +31,11 @@ const noSnuffles = passable('ExtendTests', null, (pass, enforce) => {
         enforce('The name is Snuffles').allOf({
             no_slave_name: {},
             largerThan: 5
-        }, 'here').fin();
+        }, 'here');
     });
 
     pass('regularTest', 'should pass', () => enforce(55).allOf({
         largerThan: 42
-    }).fin());
+    }));
 
-}, {
-    no_slave_name: (v) => v.indexOf('Snuffles') === -1
 });

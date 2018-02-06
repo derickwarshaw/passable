@@ -6,14 +6,12 @@ import { Errors } from 'Constants';
  * Get Passable configuration settings
  * specific - whitelist of tests to run
  * passes - The function which runs the validations
- * custom - custom validation rules
  *
  * @param {Array | String | Object} specific
  * @param {passes} Function
- * @param {custom} Object
  * @return {object} Passable configuration settings
  */
-function passableArgs(specific: Specific, passes: Passes, custom?: Rules = {}): PassableRuntime {
+function passableArgs(specific: Specific, passes: Passes): PassableRuntime {
 
     if (!arguments.length) {
         throw runtimeError(Errors.PASSABLE_ARGS_NO_ARGS);
@@ -23,14 +21,13 @@ function passableArgs(specific: Specific, passes: Passes, custom?: Rules = {}): 
         throw runtimeError(Errors.PASSABLE_ARGS_UNEXPECTED_ARGS_1, typeof passes);
     }
 
-    if (!isSpecific(specific) || typeof custom !== 'object') {
+    if (!isSpecific(specific)) {
         throw runtimeError(Errors.PASSABLE_ARGS_UNEXPECTED_ARGS_2);
     }
 
     return {
         specific: buildSpecificObject(specific),
-        passes,
-        custom
+        passes
     };
 };
 

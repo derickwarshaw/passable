@@ -1,9 +1,9 @@
 // @flow
 
-import enforce from './enforce';
+import { enforce } from './Enforce';
 import passRunner from './pass_runner';
 import ResultObject from './result_object';
-import { passableArgs, root, runtimeError, buildSpecificObject } from 'Helpers';
+import { passableArgs, runtimeError, buildSpecificObject } from 'Helpers';
 import { Errors } from 'Constants';
 
 const FAIL: Severity = 'fail';
@@ -11,23 +11,20 @@ const FAIL: Severity = 'fail';
 class Passable {
 
     specific: SpecificObject;
-    custom: Rules;
     res: ResultObject;
     pass: Function;
 
-    constructor(name: string, specific: Specific, passes: Passes, custom?: Rules) {
+    constructor(name: string, specific: Specific, passes: Passes) {
         if (typeof name !== 'string') {
             throw runtimeError(Errors.INVALID_FORM_NAME, typeof name);
         }
-        const computedArgs: PassableRuntime = passableArgs(specific, passes, custom),
-            globalRules: Rules = root.customPassableRules || {};
+        const computedArgs: PassableRuntime = passableArgs(specific, passes);
 
         this.specific = computedArgs.specific;
-        this.custom = Object.assign({}, globalRules, computedArgs.custom);
         this.res = new ResultObject(name);
         this.pass = this.pass.bind(this);
 
-        computedArgs.passes(this.pass, (value) => enforce(value, this.custom));
+        computedArgs.passes(this.pass);
 
         return this.res;
     }

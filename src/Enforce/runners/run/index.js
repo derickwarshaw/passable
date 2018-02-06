@@ -10,7 +10,7 @@
  * @return {boolean} value validation result
  */
 
-export default function run(value: AnyValue, key: string, tests: Tests, rules: Rules): boolean {
+export default function run(value: AnyValue, key: string, tests: Tests, rules: EnforceRules): boolean {
 
     if (typeof rules[key] !== 'function') {
         if (typeof tests[key] === 'function') {
