@@ -1,6 +1,5 @@
 // @flow
 
-import { enforce } from './Enforce';
 import passRunner from './pass_runner';
 import ResultObject from './result_object';
 import { passableArgs, runtimeError, buildSpecificObject } from 'Helpers';
