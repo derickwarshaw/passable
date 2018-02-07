@@ -3,7 +3,6 @@
 import rules from './rules';
 import runners from './runners';
 import { compound, single } from './chainables';
-import { root } from 'Helpers';
 
 class Enforce {
     boundRules: EnforceProxy;
@@ -12,8 +11,7 @@ class Enforce {
 
     constructor(custom: EnforceRules = {}) {
 
-        const globalRules: EnforceRules = root.customPassableRules || {};
-        const allRules: EnforceRules = Object.assign({}, rules, globalRules, custom);
+        const allRules: EnforceRules = Object.assign({}, rules, custom);
         this.allRules = allRules;
 
         this.boundRules = {};
