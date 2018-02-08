@@ -28,6 +28,7 @@ class ResultObject {
         this.validationErrors = {};
         this.validationWarnings = {};
         this.skipped = [];
+        this.tempStorage = [];
         return this;
     }
 
@@ -36,7 +37,7 @@ class ResultObject {
      * @param {string} fieldName - The name of the field.
      * @return {Object} Current instance
      */
-    initFieldCounters(fieldName: string) {
+    initField(fieldName: string) {
         if (this.testsPerformed[fieldName]) { return this; }
 
         this.testsPerformed[fieldName] = {
@@ -45,6 +46,35 @@ class ResultObject {
             warnCount: 0
         };
 
+        return this;
+    }
+
+    setTest(testData) {
+        this.tempStorage.push(testData);
+    }
+
+    seal() {
+
+        this.skipped = this.tempSkipped
+            ? [...this.tempSkipped]
+            : this.skipped;
+
+        if (this.tempStorage.length === 0) {
+            delete this.tempStorage;
+            delete this.tempSkipped;
+            return this;
+        }
+
+        this.tempStorage.forEach(({ isValid, warn, fieldName, statement }) => {
+            if (!isValid) {
+                this.fail(fieldName, statement, warn);
+            }
+
+            this.bumpTestCounter(fieldName);
+        });
+
+        delete this.tempStorage;
+        delete this.tempSkipped;
         return this;
     }
 
@@ -69,17 +99,21 @@ class ResultObject {
      * @param {string} severity - Whether it is a `fail` or `warn` test.
      * @return {Function} Calling a helper function
      */
-    fail(fieldName: string, statement: string, severity: Severity) {
-        return fail.call(this, fieldName, statement, severity);
+    fail(fieldName: string, statement: string, warn?: boolean) {
+        return fail.call(this, fieldName, statement, warn);
     }
 
     /**
-     * Uniquely add a field to the `skipped` list
+     * Uniquely add a field to the `skipped` set
      * @param {string} fieldName
      * @return {Object} Current instance
      */
     addToSkipped(fieldName: string): this {
-        !this.skipped.includes(fieldName) && this.skipped.push(fieldName);
+        this.tempSkipped = this.tempSkipped || new Set();
+
+        if (!this.tempSkipped.has(fieldName)) {
+            this.tempSkipped.add(fieldName);
+        }
 
         return this;
     }
@@ -134,7 +168,9 @@ class ResultObject {
         }
     };
     skipped: Array<string>
-    fail: Function;
+    setTest: ({fieldName: string, statement: string}, {isValid: boolean, warn?: boolean}) => TestMapKey;
+tempStorage: Array<Object>;
+    tempSkipped: Set<string>;
 }
 
 export default ResultObject;

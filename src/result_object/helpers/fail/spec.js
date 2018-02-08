@@ -19,7 +19,7 @@ describe('Test fail function', () => {
     });
 
     it('Should return correct failing object', () => {
-        const fail = testObject.fail('f1', 'should fail', 'fail');
+        const fail = testObject.fail('f1', 'should fail');
 
         expect(fail).to.deep.equal({
             name: 'FormName',
@@ -28,6 +28,7 @@ describe('Test fail function', () => {
             warnCount: 0,
             hasValidationErrors: true,
             hasValidationWarnings: false,
+            tempStorage: [],
             testsPerformed: {
                 f1: { failCount: 1, warnCount: 0 }
             },
@@ -38,12 +39,13 @@ describe('Test fail function', () => {
     });
 
     it('Should return correct warning object', () => {
-        const warn = testObject.fail('f1', 'should warn', 'warn');
+        const warn = testObject.fail('f1', 'should warn', true);
         expect(warn).to.deep.equal({
             name: 'FormName',
             testCount: 0,
             failCount: 0,
             warnCount: 1,
+            tempStorage: [],
             hasValidationErrors: false,
             hasValidationWarnings: true,
             testsPerformed: {

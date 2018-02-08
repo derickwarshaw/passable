@@ -23,11 +23,11 @@ export default (passable) => {
             });
         });
 
-        pass('field_4', 'should be either "a" or "b"', 'warn', () => {
+        pass('field_4', 'should be either "a" or "b"', () => {
             enforce('c').allOf({
                 inside: ['a', 'b']
             });
-        });
+        }).warn();
 
         pass('field_5', 'Must either be a number or a string. Always smaller than 5', () => {
             enforce('log').anyOf({

@@ -1,17 +1,15 @@
 // @flow
 import PassableResponse from '../../index';
 
-const WARN: string = 'warn';
 type CountName = 'failCount' | 'warnCount';
 type ObjectName = 'validationErrors' | 'validationWarnings';
 type ValidationName = 'hasValidationErrors' | 'hasValidationWarnings';
 
-function fail(fieldName: string, statement: string, severity: Severity): PassableResponse {
-    const isFail: boolean = (severity !== WARN);
+function fail(fieldName: string, statement: string, warn?: boolean): PassableResponse {
 
-    const countName: CountName = isFail? 'failCount' : 'warnCount',
-        objectName: objectName = isFail? 'validationErrors' : 'validationWarnings',
-        validationName: ValidationName = isFail? 'hasValidationErrors' : 'hasValidationWarnings';
+    const countName: CountName = warn ? 'warnCount' : 'failCount',
+        objectName: objectName = warn ? 'validationWarnings' : 'validationErrors',
+        validationName: ValidationName = warn ? 'hasValidationWarnings' : 'hasValidationErrors';
 
     this[validationName] = true;
     this[objectName][fieldName] = this[objectName][fieldName] || [];

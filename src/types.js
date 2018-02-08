@@ -23,9 +23,18 @@ declare type MapType = Map<mixed, mixed>;
 
 declare type Severity = 'warn' | 'fail';
 
-declare type Pass = () => void;
-declare type Passes = (pass: Pass) => void;
-
+declare type PassCB = () => void;
+declare type TestFunc = (fieldName: string, statement: string, pass: PassCB) => TestReturn;
+declare type Passes = (test: TestFunc) => void;
+declare type TestMapKey = { fieldName: string, statement: string };
+declare type TestMapValue = { isValid: boolean, warn?: boolean };
+declare type TestMap = Map<TestMapKey, TestMapValue>;
+declare type TestReturn = {
+    warn: ({
+        testKey: TestMapKey,
+        isValid: boolean
+    }) => void
+}
 declare type PassableRuntime = {
     specific: SpecificObject,
     passes: Passes

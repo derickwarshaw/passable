@@ -12,6 +12,7 @@ describe('Test PassableResponse class', () => {
             failCount: 0,
             warnCount: 0,
             testCount: 0,
+            tempStorage: [],
             testsPerformed: {},
             validationErrors: {},
             validationWarnings: {},
@@ -19,9 +20,9 @@ describe('Test PassableResponse class', () => {
         });
     });
 
-    describe('Test initFieldCounters method', () => {
+    describe('Test initField method', () => {
         let testObject;
-        beforeEach(() => testObject = new ResultObject('FormName').initFieldCounters('example'));
+        beforeEach(() => testObject = new ResultObject('FormName').initField('example'));
         it('Should add new fields and its counters to `testsPerformed`', () => {
 
             expect(testObject.testsPerformed).to.deep.equal({
@@ -51,7 +52,7 @@ describe('Test PassableResponse class', () => {
 
     describe('Test bumpTestCounters method', () => {
         let testObject;
-        beforeEach(() => testObject = new ResultObject('FormName').initFieldCounters('example'));
+        beforeEach(() => testObject = new ResultObject('FormName').initField('example'));
 
         it('Should bump test counters in `testsPerformed`', () => {
             testObject.bumpTestCounter('example');
@@ -77,13 +78,13 @@ describe('Test PassableResponse class', () => {
 
         it('Should have added field in skipped list', () => {
             testObject.addToSkipped('field_1');
-            expect(testObject.skipped).to.include('field_1');
+            expect(testObject.tempSkipped.has('field_1')).to.equal(true);
         });
 
         it('Should have added fields in skipped list', () => {
             testObject.addToSkipped('field_1').addToSkipped('field_2');
-            expect(testObject.skipped).to.include('field_1');
-            expect(testObject.skipped).to.include('field_2');
+            expect(testObject.tempSkipped.has('field_1')).to.equal(true);
+            expect(testObject.tempSkipped.has('field_2')).to.equal(true);
         });
 
         it('Should uniquely add each field', () => {
@@ -92,7 +93,7 @@ describe('Test PassableResponse class', () => {
                 .addToSkipped('field_2')
                 .addToSkipped('field_1')
                 .addToSkipped('field_2');
-            expect(testObject.skipped).to.have.lengthOf(2);
+            expect(testObject.tempSkipped.size).to.equal(2);
         });
     });
 
@@ -100,9 +101,9 @@ describe('Test PassableResponse class', () => {
         let testObject;
         beforeEach(() => {
             testObject = new ResultObject('FormName')
-                .initFieldCounters('example')
-                .initFieldCounters('example_2')
-                .fail('example', 'Error string', 'fail');
+                .initField('example')
+                .initField('example_2')
+                .fail('example', 'Error string');
         });
 
         it('Should return errors array for a field with errors', () => {
@@ -124,8 +125,8 @@ describe('Test PassableResponse class', () => {
         let testObject;
         beforeEach(() => {
             testObject = new ResultObject('FormName')
-                .initFieldCounters('example')
-                .initFieldCounters('example_2')
+                .initField('example')
+                .initField('example_2')
                 .fail('example', 'Error string', 'warn');
         });
 

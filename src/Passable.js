@@ -5,13 +5,15 @@ import ResultObject from './result_object';
 import { passableArgs, runtimeError, buildSpecificObject } from 'Helpers';
 import { Errors } from 'Constants';
 
-const FAIL: Severity = 'fail';
+const defaultWarn: TestReturn = {
+    warn: () => undefined
+};
 
 class Passable {
 
     specific: SpecificObject;
     res: ResultObject;
-    pass: Function;
+    test: TestFunc;
 
     constructor(name: string, specific: Specific, passes: Passes) {
         if (typeof name !== 'string') {
@@ -21,44 +23,40 @@ class Passable {
 
         this.specific = computedArgs.specific;
         this.res = new ResultObject(name);
-        this.pass = this.pass.bind(this);
 
-        computedArgs.passes(this.pass);
+        computedArgs.passes(this.test);
 
-        return this.res;
+        return this.res.seal();
     }
 
-    pass(fieldName: string, statement: string, ...args: [Severity, Pass]) {
+    test = (fieldName: string, statement: string, pass: PassCB) => {
         const { only, not }: { [filter: string]: Set<string>} = this.specific;
         const notInOnly: boolean = only.size > 0 && !only.has(fieldName);
 
         if (notInOnly || not.has(fieldName)) {
             this.res.addToSkipped(fieldName);
-            return null;
+            return defaultWarn;
         }
 
-        this.res.initFieldCounters(fieldName);
-
-        const lastIndex: number = args.length - 1;
-        let callback: Function;
-
-        if (typeof args[lastIndex] === 'function') {
-            callback = args[lastIndex];
-        } else {
-            return true;
+        if (typeof pass !== 'function') {
+            return defaultWarn;
         }
 
-        const isValid: boolean = passRunner(callback);
+        this.res.initField(fieldName);
 
-        if (!isValid) {
-            const severity: Severity = lastIndex !== 0 ? args[0] : FAIL;
+        const isValid: boolean = passRunner(pass);
 
-            // on failure/error, bump up the counters
-            this.res.fail(fieldName, statement, severity);
-        }
+        const testData = {
+            fieldName,
+            statement,
+            isValid
+        };
 
-        this.res.bumpTestCounter(fieldName);
-        return isValid;
+        this.res.setTest(testData);
+
+        return {
+            warn: () => testData.warn = true
+        };
     }
 }
 
