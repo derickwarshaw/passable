@@ -39,7 +39,7 @@ declare type ErrorAndWarningObject = {
 
 // Test
 declare type TestsWrapper = (test: TestProvider) => void;
-declare type TestProvider = (fieldName: string, statemenpt: string, test: TestFn, severity: Severity) => void;
+declare type TestProvider = (fieldName: string, statement: string, test: TestFn, severity: Severity) => void;
 declare type TestFn = () => void;
 
 // Test: Severity
