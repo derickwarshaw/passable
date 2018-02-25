@@ -9,6 +9,8 @@
     "prebuild": "node ./scripts/make_version_file.js",
     "prepare": "node ./scripts/make_version_file.js",
     "build": "cross-env WEBPACK_ENV=build webpack",
+    "build:ieold": "cross-env WEBPACK_ENV=ieold webpack",
+    "build:all": "cross-env WEBPACK_ENV=build webpack && cross-env WEBPACK_ENV=ieold webpack",
     "build:watch": "webpack --watch",
     "pretest": "npm run build",
     "docs:dev": "cp README.md documentation/MAIN.md && npx docpress s --port 9455 & sass --watch documentation/assets/style:documentation/assets/style --sourcemap=none",

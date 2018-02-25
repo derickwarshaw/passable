@@ -1,7 +1,6 @@
 // @flow
 import * as runnables from './runnables';
 import * as runners from './runners';
-require('proxy-polyfill/proxy.min.js');
 
 class Enforce {
     enforce: EnforceInstance;

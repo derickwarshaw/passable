@@ -5,26 +5,34 @@ const webpack = require('webpack'),
 
 const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin,
     env = process.env.WEBPACK_ENV,
-    libraryName = 'Passable',
     plugins = [];
 
 let outputFile,
-    outputDir;
+    outputDir,
+    libraryName = 'Passable',
+    entrySuffix = '';
 
-if (env === 'build') {
+if (env === 'dev') {
+    outputFile = `${libraryName}.js`;
+    outputDir = 'dev';
+} else {
     plugins.push(new UglifyJsPlugin({
         minimize: true,
         sourceMap: true
     }));
-    outputFile = `${libraryName}.min.js`;
+
+    outputFile = libraryName;
+    if (env === 'ieold') {
+        outputFile += '-ieold';
+        entrySuffix = '-ieold';
+    }
+    outputFile += '.min.js';
+
     outputDir = 'dist';
-} else {
-    outputFile = `${libraryName}.js`;
-    outputDir = 'dev';
 }
 
 const config = {
-    entry: `${__dirname}/src/index.js`,
+    entry: `${__dirname}/src/index${entrySuffix}.js`,
     devtool: 'source-map',
     output: {
         path: `${__dirname}/${outputDir}`,
